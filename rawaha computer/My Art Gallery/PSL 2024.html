@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSL 2024 POINT TABLE</title>
+    <link rel="stylesheet" href="PSL 2024.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="my-display">
+    <header>
+        <div id="logo">
+              <img src="logo.png">
+        </div>
+        <div class="search">
+              <select name="All" id="all">
+                    <option>All</option>
+              </select>
+              <input type="text" placeholder="Search me" id="search-box">
+              <img src="search.png" id="search-icon">
+        </div>
+
+        <nav class="main">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Art Gallery</a></li>
+                  <li><a href="#">Artists</a></li>
+                  <li><a href="#">Description</a></li>
+                  <li><img src="sign in.png" alt="Login"></li>
+              </ul>
+          </nav>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+  </div>
+</header>
+
+
+
+  <div id="back">
+    <button id="btn1">Back</button>
+</div>
+
+    <div class="nav">
+    <div class="table">
+        <table>
+            <tr>
+                <td id="td1">Team</td>
+                <td id="td2">Win</td>
+                <td id="td3">Loss</td>
+                <td id="td4">Draw</td>
+                <td id="td5">Points</td>
+                <td id="td6">Run Rate</td>
+            </tr>
+            <tr>
+                <td id="td1">Peshawar Zalmi</td>
+                <td id="td2">7</td>
+                <td id="td3">1</td>
+                <td id="td4">1</td>
+                <td id="td5">15</td>
+                <td id="td6">+2.134</td>
+            </tr>
+            <tr>
+                <td id="td1">Quetta Gladiators</td>
+                <td id="td2">6</td>
+                <td id="td3">1</td>
+                <td id="td4">2</td>
+                <td id="td5">14</td>
+                <td id="td6">+1.4234</td>
+            </tr>
+            <tr>
+                <td id="td1">Multan Sultan</td>
+                <td id="td2">6</td>
+                <td id="td3">3</td>
+                <td id="td4">0</td>
+                <td id="td5">12</td>
+                <td id="td6">-0.2356</td>
+            </tr>
+            <tr>
+                <td id="td1">Islamabad United</td>
+                <td id="td2">6</td>
+                <td id="td3">3</td>
+                <td id="td4">0</td>
+                <td id="td5">12</td>
+                <td id="td6">-0.9086</td>
+            </tr>
+            <tr>
+                <td id="td1">Karachi Kings</td>
+                <td id="td2">4</td>
+                <td id="td3">4</td>
+                <td id="td4">1</td>
+                <td id="td5">9</td>
+                <td id="td6">-2.5789</td>
+            </tr>
+            <tr>
+                <td id="td1">Lahore Qalanders</td>
+                <td id="td2">1</td>
+                <td id="td3">9</td>
+                <td id="td4">0</td>
+                <td id="td5">2</td>
+                <td id="td6">-3.456</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <footer>
+        <p>&COPY; copyright, 2024 Shah Designs</p>
+    </footer>
+</div><!--end my-display-->
+    <script>
+        const btn1 = document.getElementById("btn1");
+
+        btn1.addEventListener("click", function() {
+            // onclick back button it will open the Art Gallery page. 
+            window.location.href = "Art Gallery.html";
+            textbox.style.color = "red";
+        })
+    </script>
+</body>
+</html>

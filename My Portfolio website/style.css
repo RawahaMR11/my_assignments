@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+/* Header */
+header {
+    height: 4em;
+    background-color: rgba(35, 38, 38, 0.573);
+}
+.navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+    position: sticky;
+}
+/* NAVBAR ITEM PARENT */
+.navbar-item-parent {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 10em;
+}
+/* LOGO */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+.navbar-logo img{
+    height: 3.8em;
+    width: 4.8em;
+}
+/* NavBar Items */
+.navbar-items>ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    gap: 1em;
+}
+.navbar-items>ul>li>a {
+    color: white;
+    text-decoration: none;
+    padding: 0.4em;
+    transition: 0.8s ease;
+}
+.navbar-items>ul>li>a:hover {
+    background-color: white;
+    color: black;
+}
+/* SEARCHBAR PARENT */
+.searchBar-parent {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+/* Search Bar */
+.search-bar {
+    width: 10em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    background-color: rgba(0, 0, 0, 0.297);
+}
+.search-bar>label>img {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.2em;
+    left: 0.2em;
+    cursor: pointer;
+}
+#search-box {
+    width: 10em;
+    height: 2.4em;
+    font-size: 0.8em;
+    border: none;
+    outline: none;
+    border-radius: 2em;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+/* Navbar BTN */
+.navbar-btn>button {
+    width: 9em;
+    padding: 0.3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    background-color:rgba(0, 0, 0, 0.297);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 2em;
+    transition: 800ms ease;
+}
+.navbar-btn>button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 5px white,-1px -1px 5px white;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7em;
+}
+
+/* Main Website Body */
+.intro-parent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+.intro {
+    border-radius: 2em;
+    padding: 1em;
+    box-shadow: 5px 5px 15px rgb(180, 180, 180) inset,-5px -5px 15px rgb(180, 180, 180) inset;
+}
+.intro-child1{
+    width: 40em;
+    height: 20em;
+    /* border: 2px solid; */
+}
+/* CHILD2 PARENT */
+.intro-child2-parent {
+    width: 23em;
+    height: 20.5em;
+    padding:0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    box-shadow: 5px 5px 15px rgb(180, 180, 180) inset,-5px -5px 15px rgb(180, 180, 180) inset;
+}
+.intro-child2 {
+    padding: 0px;
+    width: 19em;
+    height: 19em;
+    overflow: hidden;
+    /* border: 2px solid; */
+    border-radius: 50%;
+}
+.intro-child2>img {
+    width: 19em;
+    height: 19em;
+    object-fit: cover;
+}
+.my-skills {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.skill-card1 {
+    width: 23em;
+    height: 20.5em;
+    padding:0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    box-shadow: 5px 5px 15px rgb(180, 180, 180) inset,-5px -5px 15px rgb(180, 180, 180) inset;
+}
+.skill-card2 {
+    width: 40em;
+    height: 20.5em;
+    padding:0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    box-shadow: 5px 5px 15px rgb(180, 180, 180) inset,-5px -5px 15px rgb(180, 180, 180) inset;
+}

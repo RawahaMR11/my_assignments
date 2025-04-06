@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: white;
+    background-image: url(bac.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.my-display {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+header {
+    height: 11vh;
+    background-color: rgb(62, 188, 176);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+#logo {
+    width: 10%;
+    height: 90%;
+}
+#logo img {
+    width: 60%;
+    height: 100%;
+}
+.search {
+    height: 7vh;
+    width: 50vh;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#all {
+    height: 100%;
+    width: 9vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(94, 94, 94);
+    outline: none;
+    border: none;
+}
+#search-box {
+    height: 43%;
+    width: 30vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(195, 195, 195);
+    outline: none;
+    border: none;
+    padding: 2vh;
+}
+#search-icon {
+    height: 69%;
+    width: 5vh;
+    padding: 1.1vh;
+    background-color: rgb(195, 195, 195);
+    border-left: 1.5px solid rgb(94, 94, 94);
+    cursor: pointer;
+}
+/* css for opening my page on phones (screens with width <=480px) */
+.main ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main li {
+    margin-right: 20px;
+}
+.main li img {
+    width: 50px;
+    height: 90%;
+}
+
+.main a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media query for screens smaller than 550px */
+@media (max-width: 550px) {
+    .main {
+        display: none; /* Hide the navigation links */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .menu-icon.active + .main {
+        display: block; /* Display the menu when the icon is clicked */
+    }
+
+    .main ul {
+        flex-direction: column; /* Stack the menu items vertically */
+        width: 100%;
+    }
+
+    .main li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+          font-size: 1rem;
+    }
+    .my-display {
+          width: 100%;
+    }
+}
+/* css for opening my page on laptops,pcs etc (screens with width <=1080px) */
+@media screen and (max-width: 1080px) {
+    body {
+          font-size: 1rem;
+    }
+    .my-display {
+          width: 100%;
+    }
+}
+.nav {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+#back {
+    display: flex;
+    margin-top: 1rem;
+    gap: 10vh;
+} 
+#btn1 {
+    width: 30vh;
+    margin-bottom: 31rem;
+    padding: 1vh;
+    border-radius: 1vh;
+    background-color: #727272;
+    border: none;
+    opacity: 60%;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.nav1 {
+    width: 105vh;
+    padding: 2vh;
+    background-color: #727272;
+    border: none;
+    border-radius: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 32vh;
+    opacity: 85%;
+    margin-top: 1rem;
+}
+.nav1 h1 {
+    text-align: center;
+}
+form {
+    margin-top: 5%;
+}
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;   
+}
+.name p {
+    margin-right: 2vh;
+    margin-left: 1.5vh;
+}
+#name {
+    width: 24.98vh;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vh;
+    border: none;
+    margin-left: 1vh;
+}
+.hide1 {
+    display: none;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.fname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.fname p {
+    margin-right: 2vh;
+}
+#fname {
+    width: 24.94vh;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vh;
+    border: none;
+    
+    margin-left: 1vh;
+    margin-right: 3.5vh;
+}
+.hide2 {
+    display: none;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.cnic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;   
+}
+.cnic p {
+    margin-right: 2vh;
+    margin-left: 10.3vh;
+}
+#cnic {
+    width: 24.95vh;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vh;
+    border: none;
+    margin-left: 1vh;
+}
+.hide3 {
+    display: none;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.type p {
+    margin-right: 2vh;
+}
+#type {
+    width: 26.93vh;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vh;
+    border: none;
+    
+    margin-left: 1vh;
+    margin-right: 26.3px;
+}
+.destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.destination p {
+    margin-right: 2vh;
+}
+#destination {
+    width: 24.942vh;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vh;
+    border: none;
+    
+    margin-left: 1vh;
+    margin-right: 1.15vh;
+}
+.hide4 {
+    display: none;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.resources {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.resources p {
+    margin-right: 2vh;
+}
+#resources {
+    width: 30vh;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vh;
+    border: none;
+    
+    margin-left: 1vh;
+    margin-right: 13.5vh;
+}
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.price p {
+    margin-right: 2vh;
+    margin-left: 7.7vh;
+}
+#price {
+    width: 37vh;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1vh;
+    border: none;
+    
+    margin-left: 1vh;
+}
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.phone p {
+    margin-right: 2vh;
+    margin-left: 9.5vh;
+}
+#code {
+    padding: 1.09vh;
+    margin-left: 1vh;
+    border:  none;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+#phone {
+    padding: 1.2vh;
+    width: 20vh;
+    margin-left: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border:  none;
+    outline: none;
+}
+.trip-date {
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+#trip-date {
+    padding: 1vh;
+    width: 20vh;
+    margin-left: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border:  none;
+    outline: none;
+}
+.booking-date {
+    width: 50%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+   
+}
+#booking-date {
+    padding: 1vh;
+    width: 20vh;
+    margin-left: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border:  none;
+    outline: none;
+}
+.button {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5rem;
+    
+}
+#cancel {
+    padding: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border:  none;
+    outline: none;
+    background-color: rgb(40, 56, 83);
+    border-radius: 1vh;
+    cursor: pointer;
+}
+#info {
+    padding: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border:  none;
+    outline: none;
+    background-color: rgb(40, 56, 83);
+    border-radius: 1vh;
+    cursor: pointer;
+}
+#book {
+    padding: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border:  none;
+    outline: none;
+    background-color: rgb(40, 56, 83);
+    border-radius: 1vh;
+    cursor: pointer;
+} 
+
+footer {
+      height: 9vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      background-color: black;
+      margin-top: 2rem;
+  }

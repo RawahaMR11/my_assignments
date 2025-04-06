@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>About me</title>
+
+      <style>
+
+
+* {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+  }
+  body {
+      color: white;
+      background-color: rgb(6, 53, 51);
+  }
+     /* Style the scrollbar */
+     ::-webkit-scrollbar {
+        width: 12px; /* Set the width of the scrollbar */
+      }
+  
+      /* Style the scrollbar track (background) */
+      ::-webkit-scrollbar-track {
+        background: #000000; /* Light grey track */
+        transition: 1s ease;
+      }
+  
+      /* Style the scrollbar thumb (the draggable part) */
+      ::-webkit-scrollbar-thumb {
+        background: #888; /* Grey thumb */
+        transition: background 1s ease;
+      }
+  
+      /* Change the thumb color when hovered */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Darker grey when hovered */
+      }
+  
+      /* Optional: Style the scrollbar corner */
+      ::-webkit-scrollbar-corner {
+        background: #f1f1f1;
+      }
+
+      header {
+        height: 11vh;
+        background-color: rgb(62, 188, 176);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7rem;
+  }
+
+
+            @media (max-width: 580px) {
+    .main {
+        display: none; /* Hide the navigation links */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .menu-icon.active + .main {
+        display: block; /* Display the menu when the icon is clicked */
+    }
+
+    .main ul {
+        flex-direction: column; /* Stack the menu items vertically */
+        width: 100%;
+    }
+
+    .main li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    body {
+        font-size: 1rem;
+        width: 100%;
+    }
+    .my-display {
+        width: 100%;
+        display: block;
+    }
+    .my-display header {
+        height: 30px;
+        width: 100%;
+    }
+    .my-display header #logo img {
+        width: 35px;
+        height: 95%;
+    }
+    .my-display header .search {
+        width: 100px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .my-display header .search #all {
+        width: 35px;
+        height: 100%;
+        font-size: 8px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        background-color: rgb(94, 94, 94);
+        outline: none;
+        border: none;
+    }
+    .my-display header .search #search-box {
+        width: 60px;
+        height: 20px;
+        font-size: 8px;
+        padding: 0px;
+        font-weight: 700;
+        background-color: rgb(195, 195, 195);
+        outline: none;
+        border: none;
+    }
+    .my-display header .search #search-icon {
+        height: 69%;
+        width: 5vh;
+        padding: 3.11px;
+        border-left: 1px solid rgb(94, 94, 94);
+        background-color: rgb(195, 195, 195);
+    }
+    .my-display header #menu-icon {
+        width: 30px;
+        height: 25px;
+    }
+    /* .my-display .navigation {
+        font-size: 8px;
+    }
+    body .my-display .navigation .nav {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        font-size: 8px;
+    }
+    body .my-display .navigation .nav .circle-container {
+        width: 100%;
+        height: 100px;
+        border: none;
+        border-radius: 50%;
+        position: relative;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    body .my-display .navigation .nav .info {
+        width: 100%;
+        height: 100px;
+        font-size: 8px;
+    } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+   .navigation {
+    font-size: 8px;
+   }
+   .nav {
+    display: block;
+
+   }
+
+    .circle-container {
+        position: relative;
+        width: 200px;
+        height:200px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0px 0px 2rem rgba(17, 251, 255, 0.4);
+        margin: 2rem 7rem 0;
+    }
+    
+    
+    .circle-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .circle-container:hover .circle-image {
+        transform: scale(1.2); /* Zoom in on the image */
+        box-shadow: 1rem 1rem 1.5rem rgba(17, 251, 255, 0.4), -1rem -1rem 5rem rgba(17, 251, 255, 0.4);
+    }
+    .info {
+        display: block;
+        margin: 4rem 2rem 0;
+    }
+    .my-display .navigation .nav #info {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 8px;
+        font-weight: 700;
+        color: rgb(0, 0, 189);
+        transform: typing(0px);
+        animation: fadeInOut 2s ease-in-out infinite;
+        animation-delay: 0.3s;
+    }
+     /* Delay each letter's animation */
+     #info:nth-child(1) {
+        animation-delay: 0s;
+      }
+      #info:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      #info:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      #info:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+      #info:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+      #info:nth-child(6) {
+        animation-delay: 1s;
+      }
+      #info:nth-child(7) {
+        animation-delay: 1.2s;
+      }
+      #info:nth-child(8) {
+        animation-delay: 1.4s;
+      }
+      #info:nth-child(9) {
+        animation-delay: 1.6s;
+      }
+      #info:nth-child(10) {
+        animation-delay: 1.8s;
+      }
+      #info:nth-child(11) {
+        animation-delay: 2s;
+      }
+      #info:nth-child(12) {
+        animation-delay: 2.2s;
+      }
+          /* Keyframes for the typing and removing animation */
+          @keyframes fadeInOut {
+            0% {
+              opacity: 0;
+              transform: typing(20px);
+            }
+            50% {
+              opacity: 1;
+              transform: typing(0);
+            }
+            100% {
+              opacity: 0;
+              transform: typing(0px);
+            }
+          }
+    .relation {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    #insta {
+        height: 2rem;
+        width: 2rem;
+        background-color: rgb(6, 53, 51);
+        margin-top: 2rem;
+        margin-left: 6rem;
+        border-radius:2rem;
+        border: 0.2vh solid rgb(0, 97, 114);
+        transition: 0.3s ease;
+        box-shadow: 0px 0px 1rem rgba(17, 251, 255, 0.4);
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    #insta img {
+        height: 100%;
+        width: 100%;
+    }
+    #insta:hover {
+        transform: scale(1.1); /* Zoom in effect on hover */
+        box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+    }
+    #facebook {
+        height: 2rem;
+        width: 2rem;
+        background-color: rgb(6, 53, 51);
+        margin-top: 2rem;
+        border-radius:2rem;
+        border: 0.2vh solid rgb(0, 97, 114);
+        transition: 0.3s ease;
+        box-shadow: 0px 0px 1rem rgba(17, 251, 255, 0.4);
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    #facebook img {
+        height: 100%;
+        width: 100%;
+    }
+    #facebook:hover {
+        transform: scale(1.1); /* Zoom in effect on hover */
+        box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+    }
+    #tiktok {
+        height: 2rem;
+        width: 2rem;
+        background-color: rgb(6, 53, 51);
+        margin-top: 2rem;
+        border-radius:2rem;
+        border: 0.2vh solid rgb(0, 97, 114);
+        transition: 0.3s ease;
+        box-shadow: 0px 0px 1rem rgba(17, 251, 255, 0.4);
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    #tiktok img {
+        height: 100%;
+        width: 100%;
+    }
+    #tiktok:hover {
+        transform: scale(1.1); /* Zoom in effect on hover */    
+        box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+    }
+    #twitter {
+        height: 2rem;
+        width: 2rem;
+        background-color: rgb(6, 53, 51);
+        margin-top: 2rem;
+        border-radius:2rem;
+        border: 0.2vh solid rgb(0, 97, 114);
+        transition: 0.3s ease;
+        box-shadow: 0px 0px 1rem rgba(17, 251, 255, 0.4);
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    #twitter img {
+        height: 100%;
+        width: 100%;
+    }
+    #twitter:hover {
+        transform: scale(1.1); /* Zoom in effect on hover */
+        box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+    }
+    
+    .more {
+        display: flex;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+    #left {
+        width: 100rem;
+        margin: 0 1rem 0;
+    }
+    #image {
+        position: relative;
+        width: 1400px;
+        height:205px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0px 0px 2rem rgba(17, 251, 255, 0.4);
+        transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    }
+    #image:hover {
+        transform: scale(1.1); /* Zoom in effect on hover */
+        box-shadow: 1rem 1rem 2rem rgba(17, 251, 255, 0.4), -1rem -1rem 5rem rgba(17, 251, 255, 0.4);
+    }
+    
+    #circle-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    }
+    
+    #image:hover #circle-image {
+        transform: scale(1.2); /* Zoom in on the image */
+        box-shadow: 1rem 1rem 5rem rgba(17, 251, 255, 0.4), -1rem -1rem 5rem rgba(17, 251, 255, 0.4);
+    }
+    #more {
+        margin: 4vh 1rem 0;
+        padding: 1.5vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 8px;
+        font-weight: 700;
+        border: none;
+        background-color: rgb(9, 255, 0);
+        color: rgb(6, 53, 51);
+        border-radius: 1vh;
+        box-shadow: 2px 2px 10px 2px rgba(17, 251, 255, 0.4), 2px -2px 10px 2px rgba(17, 251, 255, 0.4),-2px 2px 10px 2px rgba(17, 251, 255, 0.4), -2px 2px 10px 2px rgba(17, 251, 255, 0.4);
+        transition: 600ms ease-out;
+        cursor: pointer;
+    }
+    #more:hover {
+        background-color: rgba(17, 251, 255, 0.4);
+        box-shadow: 2px 2px 25px 2px rgba(17, 251, 255, 0.4), 2px -2px 25px 2px rgba(17, 251, 255, 0.4),-2px 2px 25px 2px rgba(17, 251, 255, 0.4), -2px 2px 25px 2px rgba(17, 251, 255, 0.4);
+        transition: 600ms ease-out;
+        color: whitesmoke;
+    }
+    /* #right {
+        width: 100rem;
+        margin: 0 1rem 0;
+    } */
+    .skills {
+        padding: 3vh;
+        display: block;
+    }
+    #hire-me {
+           width: 150px;
+           margin: 10rem 0rem 0;
+    }
+    #hire-me h1 {
+        text-align: center;
+    }
+    #hire-me p {
+        text-align: center;
+        margin-top: 2vh;
+    }
+    #hire-here {
+        width: 30vh;
+        padding: 2vh;
+        background-color: black;
+        color: white;
+        border: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-left: 11rem;
+    }
+    fieldset {
+        padding: 2rem;
+        background-color: rgba(17, 251, 255, 0.4);
+        box-shadow: 2vh 2vh 5vh black;
+        border-radius: 2vh;
+        border: none;
+    }
+    legend {
+        height: 20vh;
+        width: 20vh;
+        border-radius: 5vh;
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+    }
+    #legend-image {
+        height: 100%;
+        width: 100%;
+    }
+    #skills {
+        width: 50%;
+        margin: 10rem 4.5rem 0;
+        border: none;
+        border-radius: 2vh;
+        padding: 2rem;
+        background-color: rgba(17, 251, 255, 0.4);
+        box-shadow: 2vh 2vh 5vh black;
+    }
+    #skills h1 {
+        text-align: center;
+    }
+    progress {
+        margin: 0.5rem 1rem 0;
+        width: 30vh;
+        background-color: green;
+        margin-left: 1rem;
+    }
+    #html {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 6.9rem;
+    }
+    #css {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 7.39rem;
+    }
+    #javascript {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 1.15rem;
+    }
+    #php {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 0.5rem;
+    }
+    #python {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 0.3rem;
+    }
+    #graphic {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 0.6rem;
+    }
+    .my-info {
+        margin: 10rem 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; 
+        gap: 2vh;
+    }
+    #completed {
+        width: 30%;
+        height: 30vh;
+        background-color: rgba(17, 251, 255, 0.2);
+        padding: 1rem;
+        border-radius: 2vh;
+        transition: 800ms ease;
+        margin: 1rem 0 0;
+    }
+    #completed:hover {
+        margin-top: 1vh;
+        transition: 800ms ease;
+    }
+    #completed img {
+        width: 13vh;
+        height: 13vh;
+        margin: 1rem 1rem 0;
+        border-radius: 50%;
+    }
+    #completed h2 {
+        text-align: center;
+        margin: 1rem 0 0;
+    }
+    #completed p {
+        text-align: center;
+        margin: 0.2rem 0 0;
+    }
+    #clients {
+        width: 30%;
+        height: 30vh;
+        background-color: rgba(17, 251, 255, 0.2);
+        padding: 1rem;
+        border-radius: 2vh;
+        margin: 1rem 0 0;
+    }
+    #clients:hover {
+        margin-top: 1vh;
+        transition: 800ms ease;
+    }
+    #clients img {
+        width: 13vh;
+        height: 13vh;
+        margin: 1rem 1rem 0;
+        border-radius: 50%;
+    }
+    #clients h2 {
+        text-align: center;
+        margin: 1rem 0 0;
+    }
+    #clients p {
+        text-align: center;
+        margin: 0.2rem 0 0;
+    }
+    #experience {
+        width: 30%;
+        height: 30vh;
+        background-color: rgba(17, 251, 255, 0.2);
+        padding: 1rem;
+        border-radius: 2vh;
+        margin: 1rem 0 0;
+    }
+    #experience:hover {
+        margin-top: 1vh;
+        transition: 800ms ease;
+    }
+    #experience img {
+        width: 13vh;
+        height: 13vh;
+        margin: 1rem 1rem 0;
+        border-radius: 50%;
+    }
+    #experience h2 {
+        text-align: center;
+        margin: 1rem 0 0;
+    }
+    #experience p {
+        text-align: center;
+        margin: 0.2rem 0 0;
+    }
+    .my-projects {
+        display: block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+        margin: 10rem 0 0;
+    }
+    #my-project1-container {
+        width: 100%;
+        height: 85vh;
+        margin: 1rem 1rem 0;
+    }
+    #my-project1-container h2 {
+        text-align: center;
+        font-size: 16px;
+    }
+    #my-project1 {
+        width: 75vh;
+        height: 70vh;
+        background-color: rgb(4, 98, 87,0);
+        margin: 1rem 0 0;
+    }
+    #my-project1 img {
+        width: 100%;
+        height: 100%;
+    }
+    #my-project2-container {
+        width: 100%;
+        height: 85vh;
+        margin: 3rem 1rem 0;
+    }
+    #my-project2-container h2 {
+        text-align: center;
+        font-size: 16px;
+    }
+    #my-project2 {
+        width: 75vh;
+        height: 70vh;
+        background-color: rgb(4, 98, 87, 0);
+        margin: 1rem 0 0;
+        overflow: auto;
+    }
+    #my-project2 img {
+        width: 100%;
+        height: 100%;
+    }
+    #my-project2 #my-image {
+        margin-top: 80px;
+    }
+    #my-project2 h3 {
+        font-size: 14px;
+    }
+    footer {
+        background-color: black;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+      </style>
+
+
+
+
+</head>
+<body>
+<div class="my-display">
+      <header>
+            <div id="logo">
+                  <img src="logo.png">
+            </div>
+            <div class="search">
+                  <select name="All" id="all">
+                        <option>All</option>
+                  </select>
+                  <input type="text" placeholder="Search me" id="search-box">
+                  <img src="search.png" id="search-icon">
+            </div>
+
+            <nav class="main">
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Art Gallery</a></li>
+                      <li><a href="#">Artists</a></li>
+                      <li><a href="#">Description</a></li>
+                      <li><img src="sign in.png" alt="Login"></li>
+                  </ul>
+              </nav>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+    
+</header>
+
+
+
+
+      <div class="navigation">
+            <div class="nav">
+                  <div class="circle-container">
+                        <img src="rawaha.jpg" alt="Image" class="circle-image">
+                  </div>
+
+                  <div class="info">
+                        <p>Welcome, It's Me </p><br>
+                        <h1>Muhammad Rawaha </h1><br><br>
+                        <p id="info">Web Deisigner and Graphics Designer</p><br><br>
+                        <p>I am web designer and Graphics Designer with extensive experience for over 6 months.I have the ability to make the beautiful and animational websites.In field of Graphic designs I made diffrent beautiful simple and advance logos and packages.</p>
+                      
+                        <div class="relation">
+                        <div id="insta">
+                             <img src="insta.jpeg" alt="Instagram-icon">
+                        </div>
+                        <div id="facebook">
+                             <img src="faceboook.png" alt="Facebook">
+                        </div>
+                        <div id="tiktok">
+                              <img src="tiktok.png" alt="TIKTOK">
+                        </div>
+                        <div id="twitter">
+                              <img src="twitter x.jpeg" alt="Twitter">
+                       </div>
+                        </div>
+
+                  </div>
+            </div>
+
+            <div class="more">
+                  <div id="left">
+                        <h1>About me</h1><br>
+                        <p>I am web designer and Graphics Designer with extensive experience for over 6 months.I have the ability to make the beautiful and animational websites.In field of Graphic designs I made diffrent beautiful simple and advance logos and packages.I am web designer and Graphics Designer with extensive experience for over 6 months.I have the ability to make the beautiful and animational websites.In field of Graphic designs I made diffrent beautiful simple and advance logos and packages.</p>
+                        <button id="more">More About me</button>
+                  </div>
+                  <div id="image">
+                        <img src="rawaha mr11.jpg" alt="Image" id="circle-image">
+                  </div>
+                  <!-- <div id="right">
+                        <p>I am web designer and Graphics Designer with extensive experience for over 6 months.I have the ability to make the beautiful and animational websites.In field of Graphic designs I made diffrent beautiful simple and advance logos and packages.</p>
+                        <br>
+                        
+                  </div> -->
+            </div>
+            <div class="skills">
+                  <div id="hire-me">
+                        <fieldset>
+                              <legend><img src="mr11.jpg" alt="Profile" id="legend-image"></legend>
+                              <h1>Hire Me</h1>
+                              <p>I am web designer and Graphics Designer with extensive experience for over 6 months.I have the ability to make the beautiful and animational websites.In field of Graphic designs I made diffrent beautiful simple and advance logos and packages.</p>
+                              <button  id="hire-here">Hire me</button>
+                        </fieldset>
+                  </div>
+                  <div id="skills">
+                        <h1>My Skills</h1>
+                       <div id="html"><p>HTML</p> <p>90%</p> </div><progress value="90" max="100"></progress>
+                       <div id="css"><p>CSS</p> <p>90%</p> </div><progress value="90" max="100"></progress>
+                       <div id="javascript"><p>javascript</p> <p>40%</p> </div><progress value="40" max="100"></progress>
+                       <div id="php"><p>PHP</p> <p>15%</p> </div><progress value="15" max="100"></progress>
+                       <div id="python"><p>PYTHON</p> <p>26%</p> </div><progress value="26" max="100"></progress>
+                       <div id="graphic"><p>Graphic Design</p> <p>50%</p> </div><progress value="50" max="100"></progress>
+                  </div>
+                  <div class="my-info">
+                        <div id="completed">
+                              <img src="completee.jpeg" alt="Complte">
+                              <h2>Completed</h2>
+                              <p>practice on 20+ websites</p>
+                        </div>
+                        <div id="clients">
+                              <img src="client.png" alt="Clients">
+                              <h2>Clients</h2>
+                              <p>I have no clients yet because I do not appear in the plateform</p>
+                        </div>
+                        <div id="experience">
+                              <img src="experieance.png" alt="Experiance">
+                              <h2>Experience</h2>
+                              <p>I have experience of 6 months</p>
+                        </div>
+                  </div>
+                  <div class="my-projects">
+                        <div id="my-project1-container">
+                              <h2>My Web Designs Project</h2>
+                              <div id="my-project1">
+                                     <iframe src="Art Gallery.html" frameborder="0" width="100%" height="100%"></iframe>
+                              </div>
+                        </div>
+
+                        <div id="my-project2-container">
+                              <h2>My Graphic Designs Projects</h2>
+                              <div id="my-project2">
+                                    
+                                    <img src="search.png" alt="">
+                                    <h3>Search icon</h3>
+                                    <img src="logo.png" alt="image" id="my-image">
+                                    <h3>My website loge</h3>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <footer>
+            <p>&COPY; copyright, 2024 Shah Designs</p>
+      </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+      // Toggle the menu on smaller screens when the menu icon is clicked
+const menu = document.getElementById('menu');
+const nav = document.querySelector('.main');
+
+menu.addEventListener('click', function() {
+    nav.classList.toggle('active');
+});
+
+
+
+
+
+        // JavaScript to load another HTML file into the div
+        fetch('Art Gallery.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('my-project1').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading the page:', error));
+
+
+</script>
+      
+</body>
+</html>

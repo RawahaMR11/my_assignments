@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+            }
+            body {
+                  /* background: linear-gradient( #d34, #df56df) */
+                  background-image: -webkit-gradient(linear, 100% 100%, 
+ 10% 100%, from(#f700ff), from(#0c1822), to(#330333));
+            }
+            .body {
+                  height: 100vh;
+                  border-radius: 10px;
+                  font-family: cursive;
+                  font-size: 16px;
+                  font-weight: 300;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+            .main {
+                  width: 50vh;
+                  background-color: antiquewhite;
+                  border: 1px solid white;
+                  display:  table-cell;
+                  padding: 20px;
+                  border-radius: 10px;
+                  text-align: center;
+            }
+            #email {
+                  margin: 35px 0px 0px;
+                  padding: 2px;
+                  border: none;
+                  border-bottom: 2px solid gray;
+                  background-color: antiquewhite;
+                  outline: none;
+                  font-size: 14px;
+            }
+            .title2 {
+                  margin-left: -28px;
+            }
+            #password {
+                  margin: 25px 0px 0px;
+                  padding: 2px;
+                  border: none;
+                  border-bottom: 2px solid gray;
+                  background-color: antiquewhite;
+                  outline: none;
+                  font-size: 14px;
+            }
+
+            #checkbox {
+                  margin-top: 25px;
+            }
+            #login {
+                  margin: 25px 0px 45px;
+                  width: 170px;
+                  padding: 1px;
+                  font-size: 20px;
+                  font-weight: 700;
+                  font-family: cursive; 
+                  border: none; 
+                  color: white;
+                  background-image: -webkit-gradient(linear, 100% 100%, 10% 100%, from(#f700ff), from(#0c1822), to(#330333));
+                  border-radius: 8px;
+            }
+
+            #signUp {
+                  text-align: start;
+                  text-decoration: none;
+                  color: black;
+                  margin-bottom: -110px;
+            }
+            #forgotPassword {
+                  text-align: end;
+                  text-decoration: none;
+                  color: black;
+                  margin-left: 100px;
+            }
+            
+            
+      </style>
+</head>
+<body>
+      <div class="body">
+            <div class="main">
+                  <form action="Login">
+                        <h1>Login</h1>
+                        <label for="email" class="title">Email :</label>
+                        <input type="email" name="email" id="email"> <br>
+                        <label for="password" class="title2">Password :</label>
+                        <input type="password" name="password" id="password"><br>
+                        <input type="checkbox" name="checkbox" id="checkbox"> <label for="checkbox"> Agree to terms & condtions</label><br>
+                        <button id="login" value="Login">Login</button><br>
+                        <a href="#" id="signUp">Sign up</a>
+                        <a href="#" id="forgotPassword">Forgot password</a>
+                  
+                  </form>
+            </div>
+      </div>
+
+
+
+
+
+      <!-- <form action="example.php" method="post">
+<div>
+ <label for="name" class="title">Name:</label>
+ <input type="text" id="name" name="name" />
+</div>
+<div>
+ <label for="email" class="title">Email:</label>
+ <input type="email" id="email" name="email" />
+</div>
+<div>
+ <span class="title">Gender:</span>
+ <input type="radio" name="gender" id="male" 
+ value="M" />
+ <label for="male">Male</label>
+ <input type="radio" name="gender" id="female" 
+ value="F" />
+ <label for="female">Female</label><br />
+</div>
+<div>
+ <input type="submit" value="Register" 
+ id="submit" />
+</div>
+</form> -->
+
+
+
+
+
+</body>
+</html>

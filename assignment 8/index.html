@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #4070F4;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .navigation {
+            width: 739px;
+            height: auto;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 7px;
+        }
+        /* form {
+            display: flex;
+            flex-wrap: wrap;
+        } */
+        .details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        form h1 {
+            font-size: 25px;
+            margin-top: -10px;
+        }
+        form h3 {
+            color: #878787;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }    
+        label {
+            font-weight: 500;
+        }
+        form input {
+            width: 223px;
+            padding: 5px;
+            outline: none;
+            border: 1.5px solid #cfcfcf;
+            border-radius: 5px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        #btn {
+            width: 150px;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: blue;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navigation">
+                <h1>Registration</h1>
+                <form action="#" id="registration-form">
+                    <h3>Personal Details</h3>
+                <div class="details">
+                    <div class="input-data">
+                        <label for="username" id="username">
+                        Full Name <br> <input type="text" name="username" placeholder="Enter your name" >
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="birthDate" id="birth-date">
+                        Date of Birth <br> <input type="text" name="birthDate" placeholder="Enter birth date">
+                    </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="email" id="email">
+                            Email <br> <input type="text" name="email" placeholder="Enter your email">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="phoneNo." id="phone-number">
+                            Mobile Number <br> <input type="text" name="phone-number" placeholder="Enter mobile number">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="gender" id="gender">
+                            Gender <br> <input type="text" name="gender" placeholder="Enter your gender">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="occupation" id="occupation">
+                            Occupation <br> <input type="text" name="occupation" placeholder="Enter occupation">
+                        </label>
+                    </div>
+                </div>
+
+                    <h3>Identity Details</h3>
+
+                <div class="details">
+                    <div class="input-data">
+                        <label for="id-type" id="id-type">
+                            ID Type <br> <input type="text" name="id-type" placeholder="Enter ID type">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="id-number" id="id-number">
+                            ID Number <br> <input type="text" name="id-number" placeholder="Enter ID number">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="issue" id="issue">
+                            Issue Authority <br> <input type="text" name="issue" placeholder="Enter issue department">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="issue-date" id="issue-date">
+                            Issue Date <br> <input type="text" name="issue-date" placeholder="Enter ID issue date">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="issue-state" id="issue-state">
+                            Issue State <br> <input type="text" name="issue-state" placeholder="Enter ID issue state">
+                        </label>
+                    </div>
+                    <div class="input-data">
+                        <label for="expiry-date" id="expiry-date">
+                            Expiry Date <br> <input type="text" name="expiry-date" placeholder="Enter ID expiry date">
+                        </label>
+                    </div>
+                </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <button id="btn" name="form">Next</button>
+                </form>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Events</title>
+</head>
+<body>
+      <!-- <form method="post" action="http://www.example.org/register">
+
+            <label for="username">Create a username: </label>
+            <input type="text" name="username" id="username" onblur="checkUsername()" />
+            <div id="feedback"></div>
+            <label for="password">Create a password: </label>
+            <input type="password" name="password" id="password" />
+
+            <input type="submit" value="sign up!" />
+      </form> -->
+
+
+
+      <ul id="shoppingList">
+            <li class="complete"><a href="itemDone.php?id=1"><em>Fresh</em> figs</a></li>
+            <li class="complete"><a href="itemDone.php?id=2">pine nuts</a></li>
+            <li class="complete"><a href="itemDone.php?id=3">honey</a></li>
+            <li class="complete"><a href="itemDone.php?id=4">balsamic vinegar</a></li>
+      </ul>
+      <script>
+            // function checkUsername() {
+            //       var elmsg = document.getElementById('feedback');
+            //       var elUsername = document.getElementById('username');
+            //       if (elUsername.value.length < 5) {
+            //             elmsg.textContent = 'Username must be 5 characters or more';
+
+            //       }else {
+            //             elmsg.textContent = '';
+            //       }
+            // }
+
+
+
+
+            //addEventListeners;
+            // var elUsername = document.getElementById('username');
+            // var elMsg = document.getElementById('feedback');
+            // function checkUsername(minLength) {
+            //       if (elUsername.value.minLength < minLength) {
+            //             elMsg.textContent = 'username must be' + minLength + 'charaters or more';
+            //       }else {
+            //             elMsg.innerHTML = "";
+
+            //       }
+            // }
+            // elUsername.addEventListener('blur', function () {
+            //       checkUsername(5);
+            // }, false);
+
+
+
+
+
+
+            //Fallback for using event listeners in IE8;
+            // var elUsername = document.getElementById('username');
+            // var elMsg = document.getElementById('feedback');
+            // function checkUsername(minLength) {
+            //       if (elUsername.value.minLength < minLength) {
+            //             elMsg.textContent = 'username must be' + minLength + 'charaters or more';
+            //       }else {
+            //             elMsg.innerHTML = "";
+            //       }
+            // }
+            // if (elUsername,addEventListener) {
+            //       elUsername.addEventListener(blur, function () {checkUsername(5);});
+            // }else {
+            //       elUsername.attachEvent ('onblur', function() {checkUsername(5);});
+            // }
+
+
+
+            // The event object;
+      //       function checkUsername(e, minLength) {
+      //             var target = e.target;
+      //       }
+      //       var el = document.getElementById('username');
+      //       el.addEventListener('blur', function (e) {
+      //             checkUsername(e, 5);
+      //       }, false);
+
+
+
+
+
+      //Using event listeners with the event objects
+      // function checkUsername(e, minLength) {
+      //       var e,elMsg;
+      //       if (!e) {
+      //             e = window.event;
+      //       }
+      //       el = e.target || e.srcElement;
+      //       elMsg = el.nextSibing;
+
+      //       if (el.value.length < minLength) {
+      //             elMsg.innerHTML = 'username must be ' + minLength + 'characters or more';
+
+      //       }else {
+      //             elMsg.innerHTML = '';
+
+      //       }
+      // }
+
+      // var elUsername = document.getElementById('username');
+      // if (elUsername.addEventListener) {
+      //       elUsername.addEventListener('blur', function(e) {
+      //             checkUsername(e,5);
+      //       }, false);
+      // }else {
+      //       elUsername.attachEvent('onblur', function(e) {
+      //             checkUsername(e,5);
+      //       })
+      // }
+
+
+
+
+      function getTarget(e) {
+            if (!e) {
+                  e = window.event;
+            }
+            return e.target || e .srcElement;
+      }
+
+      function itemDone (e) {
+            var target, elParent, elGrandParent;
+            target = getTarget(e);
+            elParent = target.parentNode;
+            elGrandParent = target.parentNode.parentNode;
+            elGrandParent.removeChild(elParent);
+
+
+            if (e.preventDefault) {
+                  e.preventDefault();
+            }else {
+                  e.returnValue = false;
+            }
+      }
+
+
+      var el = document.getElementById('shoppingList');
+
+      if (el.addEventListener) {
+            el.addEventListener('click', function (e) {
+                  itemDone(e);
+            }, false);
+      }else {
+            el.attachEvent('onclick', function (e) {
+                  itemDone(e);
+            })
+      }
+
+ </script>
+
+</body>
+</html>

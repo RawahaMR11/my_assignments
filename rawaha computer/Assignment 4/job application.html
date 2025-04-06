@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="job application.css">
+</head>
+<div>
+<div class="my-display">
+      <header>
+            <div id="logo">
+                  <img src="logo.png">
+            </div>
+            <div class="search">
+                  <select name="All" id="all">
+                        <option>All</option>
+                  </select>
+                  <input type="text" placeholder="Search me" id="search-box">
+                  <img src="search.png" id="search-icon">
+            </div>
+
+            <nav class="main">
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Art Gallery</a></li>
+                      <li><a href="#">Artists</a></li>
+                      <li><a href="#">Description</a></li>
+                      <li><img src="sign in.png" alt="Login"></li>
+                  </ul>
+              </nav>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+      </div>
+</header>
+
+  <div class="navigation">
+      <div class="nav">
+           <h1>Application SST Post</h1>
+             <form>
+                  <div id="name">
+                        <label for="name">
+                              <p>Full Name :</p> <input type="text" placeholder="Enter Full Name" required>
+                        </label>
+                  </div>
+
+                  <div id="fname">
+                        <label for="fname">
+                              <p>Father Name :</p> <input type="text" placeholder="Enter Father Name" required>
+                        </label>
+                  </div>
+
+                  <div id="email">
+                        <label for="email">
+                              <p>Email :</p> <input type="email" placeholder="Enter Email" required>
+                        </label>
+                  </div>
+
+                  <div id="password">
+                        <label for="Password">
+                              <p>Password :</p> <input type="password" placeholder="Enter password" required>
+                        </label>
+                  </div>
+
+                  <div id="cnic">
+                        <label for="CNIC No.">
+                              <p>CNIC No. :</p> <input type="text" placeholder="Enter CNIC No." required>
+                        </label>
+                  </div>
+
+                  <div id="domicile">
+                        <label for="domicile">
+                              <p>Domicile :</p> <input type="text" placeholder="Enter Domicile Address" required>
+                        </label>
+                  </div>
+
+                  <div id="domicile-image">
+                        <label for="domicile">
+                              <p>Domicile :</p> <input type="file" required>
+                        </label>
+                  </div>
+
+                  <div id="gpa">
+                        <label for="GPA">
+                              <p>Grand GPA:</p> <input type="text" placeholder="Enter GPA" required>
+                        </label>
+                  </div>
+
+                  <div id="bsc-faculty">
+                        <label for="BSC Faculty">
+                              <p>BSC Faculty :</p> <input type="text" placeholder="Enter BSC Faculty" required>
+                        </label>
+                  </div>
+
+                  <div id="bsc">
+                        <label for="BSC">
+                              <p> BSC Degree :</p> <input type="file" required>
+                        </label>
+                  </div>
+                  
+                  <div id="ssc-obtained">
+                        <label for="SSC Marks">
+                              <p>SSC Obtained Marks :</p> <input type="text" placeholder="Enter SSC Obtained Marks" required>
+                        </label>
+                  </div>
+
+                  <div id="ssc-total">
+                        <label for="SSC Marks">
+                              <p>SSC Total Marks :</p> 
+                              <select name="SSC Total Marks" id="SSC-total" required>
+                                      <option>3000</option>
+                                      <option>1100</option>
+                                      <option selected>1200</option>
+                                      <option>850</option>
+                              </select>
+                        </label>
+                  </div>
+
+                  <div id="ssc-faculty">
+                        <label for="SSC Faculty">
+                              <p>SSC Faculty :</p> <input type="text" placeholder="Enter SSC Faculty" required>
+                        </label>
+                  </div>
+
+                  <div id="ssc-dmc">
+                        <label for="SSC DMC">
+                              <p>SSC DMC :</p> <input type="file" required>
+                        </label>
+                  </div>
+
+                  <div id="hssc-obtained">
+                        <label for="HSSC Obtained Marks">
+                              <p>HSSC Obtained Marks :</p> <input type="text" placeholder="Enter HSSC Obtained Marks" required>
+                        </label>
+                  </div>
+
+                  <div id="hssc-total">
+                        <label for="HSSC Faculty">
+                              <p>HSSC Total Marks :</p>
+                              <select name="SSC Total Marks" id="HSSC-total" required>
+                                    <option>3000</option>
+                                    <option>1100</option>
+                                    <option selected>1200</option>
+                                    <option>850</option>
+                            </select> 
+                        </label>
+                  </div>
+
+                  <div id="hssc-faculty">
+                        <label for="HSSC Faculty">
+                              <p>HSSC Faculty :</p> <input type="text" placeholder="Enter HSSC Faculty" required>
+                        </label>
+                  </div>
+
+                  <div id="hssc-dmc">
+                        <label for="HSSC DMC">
+                              <p>HSSC DMC :</p> <input type="file" required>
+                        </label>
+                  </div>
+                  
+                  <div class="cancel">
+                        <button id="cancel">Cancel</button>
+                  </div>
+
+                  <div class="submit">
+                        <button id="submit">Submit</button>
+                  </div>
+             </form>
+      </div>
+  </div>
+
+
+  <footer>
+      <p>&COPY; copyright, 2024 Shah Designs</p>
+  </footer>
+</div>
+
+<script>
+      const btn1 = document.getElementById("cancel");
+      const btn2 = document.getElementById("submit");
+
+      btn1.addEventListener("click", function() {
+            //By cencelling application it will go back to the home page
+            window.location.href = "Art Gallery.html";
+      })
+
+      btn2.addEventListener("click", function () {
+            //i am creating an allert event on my submit button
+            alert("Succesfully submitted")
+      })
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+a:link {
+   color: #663300;
+   acolor: #6699cc;
+}
+
+a:visited {
+   color: #996633;
+   acolor: #999999;
+}
+
+.text {
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   color: #000000;
+   font-size: 80%;
+}
+
+.hint {
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   color: #000000;
+   font-style: italic;
+   font-size: 80%;
+}
+
+.tabs {
+   font-size: 1pt;
+   background-image: url(images/tab_bg.gif);
+   line-height: 27%;
+}
+
+.copyright {
+   text-align: center;
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   color: #000000;
+   font-size: 66%;
+}
+
+.title2 {
+   color: #000000;
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-size: 66%;
+   font-weight: bold;
+}
+
+.thrule {
+   color: #000000;
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-weight: bold;
+   font-size: 80%;
+   text-align: left;
+   border: #cccc99 1px solid;
+}
+
+.tdrule {
+   color: #000000;
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-size: 80%;
+   text-align: left;
+   border: #cccc99 1px solid;
+}
+
+.OraBGColorDark {
+   background-color: #336699;
+}
+
+.OraBGAccentDark {
+   background-color: #cccc99;
+}
+
+.OraNav1Selected {
+   color: #99ccff;
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-weight: bold;
+   text-align: center;
+   font-size: 10pt;
+}
+
+.OraNav1Enabled, .OraNav1Enabled a:link, .OraNav1Enabled a:visited {
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   color: #003366;
+   font-weight: bold;
+   text-align: center;
+   text-decoration: none;
+   font-size: 10pt;
+}
+
+.OraPortletHeader {
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-weight: bold;
+   color:#336699;
+}
+
+.OraDarkPortletHeader {
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-weight: bold;
+}
+
+.RegionBorder {
+   border: #cccc99 1px solid;
+}
+
+.CellPadding {
+   line-height: 0;
+}
+
+.LeftTabForeSlant {
+   background-image: url(images/slant.gif);
+   background-repeat: no-repeat;
+   background-position: left top;
+   background-attachment: scroll;
+   background-color: #336699;
+}
+
+.LeftTabBgSlant {
+   background-image: url(images/slant.gif);
+   background-repeat: no-repeat;
+   background-position: left top;
+   background-attachment: scroll;
+   background-color: #cccc99;
+}
+
+.RightTabForeCurve {
+   background-image: url(images/curve.gif);
+   background-repeat: no-repeat;
+   background-position: right top;
+   background-attachment: scroll;
+   background-color: #336699;
+}
+
+.RightTabBgCurve {
+   background-image: url(images/curve.gif);
+   background-repeat: no-repeat;
+   background-position: right top;
+   background-attachment: scroll;
+   background-color: #cccc99;
+}
+
+.tablehilight {
+   background-color: #f7f7e7;
+}
+
+/*
+   table { border: 3px solid #ff0000; }
+*/
+
+.betanote {
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-style: italic;
+   color: #ff0000;
+   font-size: 90%;
+}
+.heading1 {
+   font-family: Arial, Helvetica, Geneva, sans-serif;
+   font-weight: bold;
+   color:#336699;
+}
+
+.codeinline {
+	font-family: Courier, MS Courier New, Prestige, Everson Mono;
+	color: #336699;
+}

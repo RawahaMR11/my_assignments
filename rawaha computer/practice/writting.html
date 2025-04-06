@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        h1 { text-align: center; }
+        .task-list { max-width: 800px; margin: 20px auto; }
+        .task-item { background: white; padding: 20px; margin: 10px 0; border-radius: 5px; }
+        .task-item button { margin-right: 10px; }
+        form { max-width: 600px; margin: 20px auto; }
+        input, select, textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Task Manager</h1>
+
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button type="submit">Login</button>
+    </div>
+
+    <div id="taskForm" style="display:none;">
+        <h2>Create Task</h2>
+        <input type="text" id="taskTitle" placeholder="Task Title">
+        <textarea id="taskDescription" placeholder="Task Description"></textarea>
+        <input type="date" id="taskDueDate">
+        <select id="taskPriority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button type="submit">Add Task</button>
+    </div>
+
+    <button id="logoutBtn" style="display:none;">Logout</button>
+
+    <div class="task-list" id="taskList"></div>
+
+    <script>
+      // Task Manager Application (Single File)
+
+class TaskManager {
+  constructor() {
+    this.tasks = [];
+    this.socket = null;
+    this.token = localStorage.getItem('token');
+    this.user = JSON.parse(localStorage.getItem('user'));
+    this.init();
+  }
+
+  // Initialize the app
+  init() {
+    if (this.token) {
+      this.loadTasksFromStorage();
+    }
+
+    this.setupEventListeners();
+    this.initWebSocket();
+  }
+
+  // Setup Event Listeners for DOM interactions
+  setupEventListeners() {
+    document.getElementById('taskForm').addEventListener('submit', this.createTask.bind(this));
+    document.getElementById('loginForm').addEventListener('submit', this.login.bind(this));
+    document.getElementById('logoutBtn').addEventListener('click', this.logout.bind(this));
+    document.getElementById('taskList').addEventListener('click', this.handleTaskActions.bind(this));
+  }
+
+  // Initialize WebSocket for real-time updates
+  initWebSocket() {
+    this.socket = new WebSocket('ws://localhost:8080');
+    
+    this.socket.onopen = () => {
+      console.log('WebSocket connection established.');
+    };
+
+    this.socket.onmessage = (event) => {
+      const message = JSON.parse(event.data);
+      if (message.type === 'task') {
+        this.addTaskToUI(message.task);
+      }
+    };
+
+    this.socket.onerror = (error) => {
+      console.log('WebSocket error:', error);
+    };
+
+    this.socket.onclose = () => {
+      console.log('WebSocket connection closed.');
+    };
+  }
+
+  // Handle user login
+  login(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    if (!username || !password) {
+      alert('Please enter both username and password.');
+      return;
+    }
+
+    this.authenticateUser(username, password);
+  }
+
+  // Simulate authentication (In a real app, you'd send a request to the server)
+  authenticateUser(username, password) {
+    // For simplicity, we'll mock the auth and just check if the username and password match.
+    if (username === 'admin' && password === 'admin123') {
+      this.token = 'mockToken';
+      this.user = { username };
+      localStorage.setItem('token', this.token);
+      localStorage.setItem('user', JSON.stringify(this.user));
+      this.loadTasksFromStorage();
+    } else {
+      alert('Invalid credentials!');
+    }
+  }
+
+  // Handle user logout
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.token = null;
+    this.user = null;
+    this.clearUI();
+    alert('You have logged out.');
+  }
+
+  // Load tasks from LocalStorage
+  loadTasksFromStorage() {
+    this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    this.renderTaskList();
+  }
+
+  // Render task list UI
+  renderTaskList() {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';  // Clear the list before rendering
+
+    this.tasks.forEach(task => {
+      this.addTaskToUI(task);
+    });
+  }
+
+  // Add a task to the UI
+  addTaskToUI(task) {
+    const taskList = document.getElementById('taskList');
+    const taskItem = document.createElement('div');
+    taskItem.classList.add('task-item');
+    taskItem.dataset.id = task.id;
+
+    taskItem.innerHTML = `
+      <h3>${task.title}</h3>
+      <p>${task.description}</p>
+      <p><strong>Due: </strong>${new Date(task.dueDate).toLocaleDateString()}</p>
+      <p><strong>Priority: </strong>${task.priority}</p>
+      <div>
+        <button class="editBtn">Edit</button>
+        <button class="deleteBtn">Delete</button>
+        <button class="completeBtn">${task.completed ? 'Mark Incomplete' : 'Mark Complete'}</button>
+      </div>
+    `;
+
+    taskList.appendChild(taskItem);
+  }
+
+  // Handle task actions like Edit, Delete, and Complete
+  handleTaskActions(event) {
+    const taskItem = event.target.closest('.task-item');
+    const taskId = taskItem.dataset.id;
+
+    if (event.target.classList.contains('deleteBtn')) {
+      this.deleteTask(taskId);
+    }
+
+    if (event.target.classList.contains('editBtn')) {
+      this.editTask(taskId);
+    }
+
+    if (event.target.classList.contains('completeBtn')) {
+      this.toggleTaskCompletion(taskId);
+    }
+  }
+
+  // Create a new task
+  createTask(event) {
+    event.preventDefault();
+
+    const title = document.getElementById('taskTitle').value;
+    const description = document.getElementById('taskDescription').value;
+    const dueDate = document.getElementById('taskDueDate').value;
+    const priority = document.getElementById('taskPriority').value;
+
+    if (!title || !description || !dueDate) {
+      alert('Please fill out all fields.');
+      return;
+    }
+
+    const newTask = {
+      id: Date.now().toString(),
+      title,
+      description,
+      dueDate,
+      priority,
+      completed: false,
+    };
+
+    this.tasks.push(newTask);
+    this.saveTasksToStorage();
+    this.addTaskToUI(newTask);
+
+    // Broadcast new task to other users via WebSocket
+    this.socket.send(JSON.stringify({ type: 'task', task: newTask }));
+
+    document.getElementById('taskForm').reset();
+  }
+
+  // Save tasks to LocalStorage
+  saveTasksToStorage() {
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+  }
+
+  // Edit a task
+  editTask(taskId) {
+    const task = this.tasks.find(t => t.id === taskId);
+    if (task) {
+      document.getElementById('taskTitle').value = task.title;
+      document.getElementById('taskDescription').value = task.description;
+      document.getElementById('taskDueDate').value = task.dueDate;
+      document.getElementById('taskPriority').value = task.priority;
+      document.getElementById('taskForm').dataset.editing = taskId;
+    }
+  }
+
+  // Update a task
+  updateTask(taskId) {
+    const task = this.tasks.find(t => t.id === taskId);
+    if (task) {
+      task.title = document.getElementById('taskTitle').value;
+      task.description = document.getElementById('taskDescription').value;
+      task.dueDate = document.getElementById('taskDueDate').value;
+      task.priority = document.getElementById('taskPriority').value;
+
+      this.saveTasksToStorage();
+      this.renderTaskList();
+    }
+  }
+
+  // Delete a task
+  deleteTask(taskId) {
+    this.tasks = this.tasks.filter(t => t.id !== taskId);
+    this.saveTasksToStorage();
+    this.renderTaskList();
+  }
+
+  // Toggle task completion
+  toggleTaskCompletion(taskId) {
+    const task = this.tasks.find(t => t.id === taskId);
+    if (task) {
+      task.completed = !task.completed;
+      this.saveTasksToStorage();
+      this.renderTaskList();
+    }
+  }
+
+  // Clear the UI (for logout)
+  clearUI() {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';
+  }
+}
+
+// Instantiate and start the app
+const app = new TaskManager();
+    </script>
+</body>
+</html>

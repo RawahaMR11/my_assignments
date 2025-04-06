@@ -1,0 +1,388 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil Calibri;}{\f3\fnil\fcharset178 Calibri;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\ltrpar\sa200\sl276\slmult1\f0\fs22\lang9 ChatGPT 4o mini\par
+\par
+Log in\par
+\par
+Sign up\par
+You said:\par
+how to form the database using the table are employees, customers, suppliers. product_types, products,  orders, purchases, invoices\par
+ChatGPT said:\par
+ChatGPT\par
+To form a database that includes tables like employees, customers, suppliers, product_types, products, orders, purchases, and invoices, you need to define the relationships between these tables and how they will interact. Below is a basic structure to help you get started, including the tables and their relationships.\par
+\par
+1. Employees Table\par
+This table stores information about the employees.\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE employees (\par
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    first_name VARCHAR(100),\par
+    last_name VARCHAR(100),\par
+    email VARCHAR(100) UNIQUE,\par
+    phone_number VARCHAR(15),\par
+    hire_date DATE,\par
+    position VARCHAR(100),\par
+    department VARCHAR(100),\par
+    salary DECIMAL(10, 2)\par
+);\par
+2. Customers Table\par
+This table stores information about customers.\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE customers (\par
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    first_name VARCHAR(100),\par
+    last_name VARCHAR(100),\par
+    email VARCHAR(100) UNIQUE,\par
+    phone_number VARCHAR(15),\par
+    address VARCHAR(255),\par
+    city VARCHAR(100),\par
+    state VARCHAR(100),\par
+    postal_code VARCHAR(20),\par
+    country VARCHAR(100)\par
+);\par
+3. Suppliers Table\par
+This table stores information about suppliers.\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE suppliers (\par
+    supplier_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    supplier_name VARCHAR(255),\par
+    contact_name VARCHAR(100),\par
+    contact_email VARCHAR(100),\par
+    contact_phone VARCHAR(15),\par
+    address VARCHAR(255),\par
+    city VARCHAR(100),\par
+    state VARCHAR(100),\par
+    postal_code VARCHAR(20),\par
+    country VARCHAR(100)\par
+);\par
+4. Product Types Table\par
+This table stores types of products (e.g., Electronics, Furniture, etc.).\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE product_types (\par
+    product_type_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    product_type_name VARCHAR(100)\par
+);\par
+5. Products Table\par
+This table stores the products information, linking to suppliers and product types.\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE products (\par
+    product_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    product_name VARCHAR(255),\par
+    product_type_id INT,\par
+    supplier_id INT,\par
+    unit_price DECIMAL(10, 2),\par
+    stock_quantity INT,\par
+    FOREIGN KEY (product_type_id) REFERENCES product_types(product_type_id),\par
+    FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id)\par
+);\par
+6. Orders Table\par
+This table stores orders placed by customers. Each order may have multiple products.\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE orders (\par
+    order_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    customer_id INT,\par
+    employee_id INT,\par
+    order_date DATE,\par
+    total_amount DECIMAL(10, 2),\par
+    status VARCHAR(50),\par
+    shipping_address VARCHAR(255),\par
+    shipping_city VARCHAR(100),\par
+    shipping_state VARCHAR(100),\par
+    shipping_postal_code VARCHAR(20),\par
+    shipping_country VARCHAR(100),\par
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),\par
+    FOREIGN KEY (employee_id) REFERENCES employees(employee_id)\par
+);\par
+7. Order Details Table\par
+This table stores the products ordered in each order (many-to-many relationship).\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE order_details (\par
+    order_detail_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    order_id INT,\par
+    product_id INT,\par
+    quantity INT,\par
+    unit_price DECIMAL(10, 2),\par
+    total_price DECIMAL(10, 2),\par
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),\par
+    FOREIGN KEY (product_id) REFERENCES products(product_id)\par
+);\par
+8. Purchases Table\par
+This table records purchases made from suppliers.\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE purchases (\par
+    purchase_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    supplier_id INT,\par
+    employee_id INT,\par
+    purchase_date DATE,\par
+    total_amount DECIMAL(10, 2),\par
+    status VARCHAR(50),\par
+    FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),\par
+    FOREIGN KEY (employee_id) REFERENCES employees(employee_id)\par
+);\par
+9. Purchase Details Table\par
+This table stores the products purchased from suppliers (many-to-many relationship).\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE purchase_details (\par
+    purchase_detail_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    purchase_id INT,\par
+    product_id INT,\par
+    quantity INT,\par
+    unit_price DECIMAL(10, 2),\par
+    total_price DECIMAL(10, 2),\par
+    FOREIGN KEY (purchase_id) REFERENCES purchases(purchase_id),\par
+    FOREIGN KEY (product_id) REFERENCES products(product_id)\par
+);\par
+10. Invoices Table\par
+This table stores invoices for orders and purchases. An invoice can correspond to either an order or a purchase.\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE invoices (\par
+    invoice_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    invoice_type VARCHAR(50),  -- 'Order' or 'Purchase'\par
+    invoice_reference_id INT,  -- Reference to either order_id or purchase_id\par
+    invoice_date DATE,\par
+    amount DECIMAL(10, 2),\par
+    payment_status VARCHAR(50),\par
+    FOREIGN KEY (invoice_reference_id) REFERENCES orders(order_id) ON DELETE CASCADE,\par
+    FOREIGN KEY (invoice_reference_id) REFERENCES purchases(purchase_id) ON DELETE CASCADE\par
+);\par
+Relationships Overview:\par
+Employees \f1\u8594?\f2  \f0 Orders: An employee (e.g., a salesperson) is responsible for taking an order. This is a one-to-many relationship.\par
+Customers \f1\u8594?\f2  \f0 Orders: A customer can place many orders.\par
+Orders \f1\u8594?\f2  \f0 Products: A customer can order many products, and a product can appear in many orders. This is a many-to-many relationship via the order_details table.\par
+Suppliers \f1\u8594?\f2  \f0 Products: A supplier can provide many products.\par
+Products \f1\u8594?\f2  \f0 Purchases: The company can purchase many products from suppliers.\par
+Orders \f1\u8594?\f2  \f0 Invoices: An invoice is generated for each order.\par
+Purchases \f1\u8594?\f2  \f0 Invoices: An invoice is generated for each purchase from a supplier.\par
+Example Data Inserts:\par
+Here's an example of how you might insert data into these tables:\par
+\par
+sql\par
+Copy code\par
+-- Insert into Product Types\par
+INSERT INTO product_types (product_type_name) VALUES ('Electronics'), ('Furniture');\par
+\par
+-- Insert into Suppliers\par
+INSERT INTO suppliers (supplier_name, contact_name, contact_email, contact_phone, address, city, state, postal_code, country)\par
+VALUES ('ABC Electronics', 'John Doe', 'john@abc.com', '1234567890', '123 Elm St', 'New York', 'NY', '10001', 'USA');\par
+\par
+-- Insert into Products\par
+INSERT INTO products (product_name, product_type_id, supplier_id, unit_price, stock_quantity)\par
+VALUES ('Laptop', 1, 1, 1200.00, 50);\par
+This is just the starting point for your database. You can add more tables, columns, and relationships based on your business requirements. The key is to structure your tables in a way that maintains data integrity, such as by using foreign keys to represent relationships between entities.\par
+\par
+\par
+\par
+You said:\par
+how to form the database using the table are employees, customers, suppliers. product_types, products,  orders, purchases, invoices in urdu\par
+ChatGPT said:\par
+ChatGPT\par
+\f3\rtlch\lang1025\'c7\'d3 \'8f\u1740?\'8a\'c7 \'c8\u1740?\'d3 \'98\'e6 \'c8\'e4\'c7\'e4\'ff \'98\'ff \'e1\'c6\'ff\'a1 \'c2\'81 \'98\'e6 \'e3\'ce\'ca\'e1\'dd \'8a\u1740?\'c8\'e1\'d2 \'98\'ff \'c8\u1740?\'8d \'ca\'da\'e1\'de\'c7\'ca\f0\ltrch\lang1033  (relationships) \f3\rtlch\lang1025\'98\'e6 \'d3\'e3\'cc\'aa\'e4\'c7 \'c0\'e6\'90\'c7\u1748? \'e4\u1740?\'8d\'ff \'c7\u1740?\'98 \'d3\'c7\'cf\'c0 \'e3\'cb\'c7\'e1 \'cf\u1740? \'90\'c6\u1740? \'c0\'ff \'98\'c0 \'c2\'81 \'98\'d3 \'d8\'d1\'cd\f0\ltrch\lang1033  employees, customers, suppliers, product_types, products, orders, purchases, \f3\rtlch\lang1025\'c7\'e6\'d1\f0\ltrch\lang1033  invoices \f3\rtlch\lang1025\'cc\u1740?\'d3\'ff \'8a\u1740?\'c8\'e1\'d2 \'98\'ff \'d0\'d1\u1740?\'da\'ff \'8f\u1740?\'8a\'c7 \'c8\u1740?\'d3 \'c8\'e4\'c7 \'d3\'98\'ca\'ff \'c0\u1740?\'9f\u1748?\f0\ltrch\lang1033\par
+\par
+1. Employees Table (\f3\rtlch\lang1025\'e3\'e1\'c7\'d2\'e3\u1740?\'e4\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'e3\'e1\'c7\'d2\'e3\u1740?\'e4 \'98\u1740? \'e3\'da\'e1\'e6\'e3\'c7\'ca \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE employees (\par
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    first_name VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    last_name VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    email VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ) UNIQUE,\par
+    phone_number VARCHAR(\f3\rtlch\lang1025 15\f0\ltrch\lang1033 ),\par
+    hire_date DATE,\par
+    position VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    department VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    salary DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 )\par
+);\par
+2. Customers Table (\f3\rtlch\lang1025\'90\'c7\'c0\'98\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'90\'c7\'c0\'98\'e6\'9f \'98\u1740? \'e3\'da\'e1\'e6\'e3\'c7\'ca \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE customers (\par
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    first_name VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    last_name VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    email VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ) UNIQUE,\par
+    phone_number VARCHAR(\f3\rtlch\lang1025 15\f0\ltrch\lang1033 ),\par
+    address VARCHAR(\f3\rtlch\lang1025 255\f0\ltrch\lang1033 ),\par
+    city VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    state VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    postal_code VARCHAR(\f3\rtlch\lang1025 20\f0\ltrch\lang1033 ),\par
+    country VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 )\par
+);\par
+3. Suppliers Table (\f3\rtlch\lang1025\'d3\'81\'e1\'c7\'c6\'d1\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'d3\'81\'e1\'c7\'c6\'d1\'d2 \'98\u1740? \'e3\'da\'e1\'e6\'e3\'c7\'ca \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE suppliers (\par
+    supplier_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    supplier_name VARCHAR(\f3\rtlch\lang1025 255\f0\ltrch\lang1033 ),\par
+    contact_name VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    contact_email VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    contact_phone VARCHAR(\f3\rtlch\lang1025 15\f0\ltrch\lang1033 ),\par
+    address VARCHAR(\f3\rtlch\lang1025 255\f0\ltrch\lang1033 ),\par
+    city VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    state VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    postal_code VARCHAR(\f3\rtlch\lang1025 20\f0\ltrch\lang1033 ),\par
+    country VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 )\par
+);\par
+4. Product Types Table (\f3\rtlch\lang1025\'81\'d1\'e6\'8f\'98\'8a \'98\u1740? \'c7\'de\'d3\'c7\'e3\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'81\'d1\'e6\'8f\'98\'8a \'98\u1740? \'c7\'de\'d3\'c7\'e3 (\'cc\u1740?\'d3\'ff \'c7\'e1\u1740?\'98\'8a\'d1\'c7\'e4\'98\'d3\'a1 \'dd\'d1\'e4\u1740?\'8d\'d1) \'98\'e6 \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE product_types (\par
+    product_type_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    product_type_name VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 )\par
+);\par
+5. Products Table (\f3\rtlch\lang1025\'81\'d1\'e6\'8f\'98\'8a\'d3\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'81\'d1\'e6\'8f\'98\'8a\'d3 \'98\u1740? \'e3\'da\'e1\'e6\'e3\'c7\'ca \'d1\'98\'aa\'ca\'c7 \'c0\'ff \'c7\'e6\'d1 \'d3\'81\'e1\'c7\'c6\'d1\'d2 \'c7\'e6\'d1 \'81\'d1\'e6\'8f\'98\'8a \'c7\'de\'d3\'c7\'e3 \'98\'ff \'d3\'c7\'ca\'aa \'e1\'e4\'98 \'c0\'e6\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE products (\par
+    product_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    product_name VARCHAR(\f3\rtlch\lang1025 255\f0\ltrch\lang1033 ),\par
+    product_type_id INT,\par
+    supplier_id INT,\par
+    unit_price DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    stock_quantity INT,\par
+    FOREIGN KEY (product_type_id) REFERENCES product_types(product_type_id),\par
+    FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id)\par
+);\par
+6. Orders Table (\f3\rtlch\lang1025\'c2\'d1\'8f\'d1\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'90\'c7\'c0\'98\'e6\'9f \'98\'ff \'c2\'d1\'8f\'d1\'d2 \'98\'e6 \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE orders (\par
+    order_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    customer_id INT,\par
+    employee_id INT,\par
+    order_date DATE,\par
+    total_amount DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    status VARCHAR(\f3\rtlch\lang1025 50\f0\ltrch\lang1033 ),\par
+    shipping_address VARCHAR(\f3\rtlch\lang1025 255\f0\ltrch\lang1033 ),\par
+    shipping_city VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    shipping_state VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    shipping_postal_code VARCHAR(\f3\rtlch\lang1025 20\f0\ltrch\lang1033 ),\par
+    shipping_country VARCHAR(\f3\rtlch\lang1025 100\f0\ltrch\lang1033 ),\par
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),\par
+    FOREIGN KEY (employee_id) REFERENCES employees(employee_id)\par
+);\par
+7. Order Details Table (\f3\rtlch\lang1025\'c2\'d1\'8f\'d1 \'98\u1740? \'ca\'dd\'d5\u1740?\'e1\'c7\'ca\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'c2\'d1\'8f\'d1 \'98\u1740? \'81\'d1\'e6\'8f\'98\'8a\'d3 \'98\u1740? \'e3\'da\'e1\'e6\'e3\'c7\'ca \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE order_details (\par
+    order_detail_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    order_id INT,\par
+    product_id INT,\par
+    quantity INT,\par
+    unit_price DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    total_price DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),\par
+    FOREIGN KEY (product_id) REFERENCES products(product_id)\par
+);\par
+8. Purchases Table (\f3\rtlch\lang1025\'ce\'d1\u1740?\'cf\'c7\'d1\u1740?\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'d3\'81\'e1\'c7\'c6\'d1\'d2 \'d3\'ff \'98\u1740? \'cc\'c7\'e4\'ff \'e6\'c7\'e1\u1740? \'ce\'d1\u1740?\'cf\'c7\'d1\u1740?\'e6\'9f \'98\u1740? \'e3\'da\'e1\'e6\'e3\'c7\'ca \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE purchases (\par
+    purchase_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    supplier_id INT,\par
+    employee_id INT,\par
+    purchase_date DATE,\par
+    total_amount DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    status VARCHAR(\f3\rtlch\lang1025 50\f0\ltrch\lang1033 ),\par
+    FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),\par
+    FOREIGN KEY (employee_id) REFERENCES employees(employee_id)\par
+);\par
+9. Purchase Details Table (\f3\rtlch\lang1025\'ce\'d1\u1740?\'cf\'c7\'d1\u1740? \'98\u1740? \'ca\'dd\'d5\u1740?\'e1\'c7\'ca\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'ce\'d1\u1740?\'cf\u1740? \'90\'c6\u1740? \'81\'d1\'e6\'8f\'98\'8a\'d3 \'98\u1740? \'e3\'da\'e1\'e6\'e3\'c7\'ca \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE purchase_details (\par
+    purchase_detail_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    purchase_id INT,\par
+    product_id INT,\par
+    quantity INT,\par
+    unit_price DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    total_price DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    FOREIGN KEY (purchase_id) REFERENCES purchases(purchase_id),\par
+    FOREIGN KEY (product_id) REFERENCES products(product_id)\par
+);\par
+10. Invoices Table (\f3\rtlch\lang1025\'c7\'e4\'e6\'c7\'c6\'d3\f0\ltrch\lang1033 )\par
+\f3\rtlch\lang1025\u1740?\'c0 \'8a\u1740?\'c8\'e1 \'c2\'d1\'8f\'d1\'d2 \'c7\'e6\'d1 \'ce\'d1\u1740?\'cf\'c7\'d1\u1740?\'e6\'9f \'98\'ff \'e1\'c6\'ff \'c7\'e4\'e6\'c7\'c6\'d3\'d2 \'d1\'98\'aa\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\par
+sql\par
+Copy code\par
+CREATE TABLE invoices (\par
+    invoice_id INT PRIMARY KEY AUTO_INCREMENT,\par
+    invoice_type VARCHAR(\f3\rtlch\lang1025 50\f0\ltrch\lang1033 ),  -- 'Order' \f3\rtlch\lang1025\u1740?\'c7\f0\ltrch\lang1033  'Purchase'\par
+    invoice_reference_id INT,  -- \f3\rtlch\lang1025\'c2\'d1\'8f\'d1 \u1740?\'c7 \'ce\'d1\u1740?\'cf\'c7\'d1\u1740? \'98\'c7 \'cd\'e6\'c7\'e1\'c0\f0\ltrch\lang1033\par
+    invoice_date DATE,\par
+    amount DECIMAL(\f3\rtlch\lang1025 10\f0\ltrch\lang1033 , \f3\rtlch\lang1025 2\f0\ltrch\lang1033 ),\par
+    payment_status VARCHAR(\f3\rtlch\lang1025 50\f0\ltrch\lang1033 ),\par
+    FOREIGN KEY (invoice_reference_id) REFERENCES orders(order_id) ON DELETE CASCADE,\par
+    FOREIGN KEY (invoice_reference_id) REFERENCES purchases(purchase_id) ON DELETE CASCADE\par
+);\par
+\f3\rtlch\lang1025\'ca\'da\'e1\'de\'c7\'ca \'98\'c7 \'cc\'c7\'c6\'d2\'c0\f0\ltrch\lang1033 :\par
+Employees \f1\u8594?\f2  \f0 Orders: \f3\rtlch\lang1025\'c7\u1740?\'98 \'e3\'e1\'c7\'d2\'e3 \'98\'c6\u1740? \'c2\'d1\'8f\'d1\'d2 \'e1\'ff \'d3\'98\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+Customers \f1\u8594?\f2  \f0 Orders: \f3\rtlch\lang1025\'c7\u1740?\'98 \'90\'c7\'c0\'98 \'98\'c6\u1740? \'c2\'d1\'8f\'d1\'d2 \'98\'d1 \'d3\'98\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+Orders \f1\u8594?\f2  \f0 Products: \f3\rtlch\lang1025\'c7\u1740?\'98 \'c2\'d1\'8f\'d1 \'e3\u1740?\'9f \'98\'c6\u1740? \'81\'d1\'e6\'8f\'98\'8a\'d3 \'c0\'e6 \'d3\'98\'ca\u1740? \'c0\u1740?\'9f\'a1 \'c7\'e6\'d1 \'c7\u1740?\'98 \'81\'d1\'e6\'8f\'98\'8a \'98\'c6\u1740? \'c2\'d1\'8f\'d1\'d2 \'e3\u1740?\'9f \'c0\'e6 \'d3\'98\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+Suppliers \f1\u8594?\f2  \f0 Products: \f3\rtlch\lang1025\'c7\u1740?\'98 \'d3\'81\'e1\'c7\'c6\'d1 \'98\'c6\u1740? \'81\'d1\'e6\'8f\'98\'8a\'d3 \'dd\'d1\'c7\'c0\'e3 \'98\'d1 \'d3\'98\'ca\'c7 \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+Products \f1\u8594?\f2  \f0 Purchases: \f3\rtlch\lang1025\'81\'d1\'e6\'8f\'98\'8a\'d3 \'d3\'81\'e1\'c7\'c6\'d1\'d2 \'d3\'ff \'ce\'d1\u1740?\'cf\u1740? \'cc\'c7\'ca\u1740? \'c0\u1740?\'9f\u1748?\f0\ltrch\lang1033\par
+Orders \f1\u8594?\f2  \f0 Invoices: \f3\rtlch\lang1025\'c0\'d1 \'c2\'d1\'8f\'d1 \'98\'ff \'e1\u1740?\'ff \'c7\u1740?\'98 \'c7\'e4\'e6\'c7\'c6\'d3 \'c8\'e4\'c7\'c6\u1740? \'cc\'c7\'ca\u1740? \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+Purchases \f1\u8594?\f2  \f0 Invoices: \f3\rtlch\lang1025\'c0\'d1 \'ce\'d1\u1740?\'cf\'c7\'d1\u1740? \'98\'ff \'e1\u1740?\'ff \'c7\u1740?\'98 \'c7\'e4\'e6\'c7\'c6\'d3 \'c8\'e4\'c7\'c6\u1740? \'cc\'c7\'ca\u1740? \'c0\'ff\u1748?\f0\ltrch\lang1033\par
+\f3\rtlch\lang1025\'8f\u1740?\'8a\'c7 \'8f\'c7\'e1\'e4\'ff \'98\u1740? \'e3\'cb\'c7\'e1\f0\ltrch\lang1033 :\par
+sql\par
+Copy code\par
+-- \f3\rtlch\lang1025\'81\'d1\'e6\'8f\'98\'8a \'98\u1740? \'c7\'de\'d3\'c7\'e3 \'e3\u1740?\'9f \'8f\u1740?\'8a\'c7 \'8f\'c7\'e1\'e4\'c7\f0\ltrch\lang1033\par
+INSERT INTO product_types (product_type_name) VALUES \f3\rtlch\lang1025 ('\'c7\'e1\u1740?\'98\'8a\'d1\'c7\'e4\'98\'d3'), ('\'dd\'d1\'e4\u1740?\'8d\'d1')\f0\ltrch\lang1033 ;\par
+\par
+-- \f3\rtlch\lang1025\'d3\'81\'e1\'c7\'c6\'d1\'d2 \'e3\u1740?\'9f \'8f\u1740?\'8a\'c7 \'8f\'c7\'e1\'e4\'c7\f0\ltrch\lang1033\par
+INSERT INTO suppliers (supplier_name, contact_name, contact_email, contact_phone, address, city, state, postal_code, country)\par
+VALUES ('\f3\rtlch\lang1025\'c7\'ff \'c8\u1740? \'d3\u1740? \'c7\'e1\u1740?\'98\'8a\'d1\'c7\'e4\'98\'d3', '\'cc\'c7\'e4 \'8f\'e6\f0\ltrch\lang1033 ', 'john@abc.com', '\f3\rtlch\lang1025 1234567890\f0\ltrch\lang1033 ', '\f3\rtlch\lang1025 123\f0\ltrch\lang1033  \f3\rtlch\lang1025\'c7\u1740?\'e1\'e3 \'c7\'d3\'8a\'d1\u1740?\'8a', '\'e4\u1740?\'e6\u1740?\'c7\'d1\'98\f0\ltrch\lang1033 ', 'NY', '\f3\rtlch\lang1025 10001\f0\ltrch\lang1033 ', '\f3\rtlch\lang1025\'c7\'e3\'d1\u1740?\'98\'c0\f0\ltrch\lang1033 ');\par
+\par
+-- \f3\rtlch\lang1025\'81\'d1\'e6\'8f\'98\'8a\'d3 \'e3\u1740?\'9f \'8f\u1740?\'8a\'c7 \'8f\'c7\'e1\'e4\'c7\f0\ltrch\lang1033\par
+INSERT INTO products (product_name, product_type_id, supplier_id, unit_price, stock_quantity)\par
+VALUES ('\f3\rtlch\lang1025\'e1\u1740?\'81 \'8a\'c7\'81', 1, 1, 1200.00, 50\f0\ltrch\lang1033 );\par
+\f3\rtlch\lang1025\u1740?\'c0 \'c8\'e4\u1740?\'c7\'cf\u1740? \'8f\u1740?\'8a\'c7 \'c8\u1740?\'d3 \'c7\'d3\'8a\'d1\'98\'8d\'d1 \'c0\'ff\u1748? \'c2\'81 \'c7\'d3\'ff \'e3\'d2\u1740?\'cf \'8a\u1740?\'c8\'e1\'d2\'a1 \'98\'c7\'e1\'e3\'d2 \'c7\'e6\'d1 \'ca\'da\'e1\'de\'c7\'ca \'98\'ff \'d3\'c7\'ca\'aa \'c8\'9a\'aa\'c7 \'d3\'98\'ca\'ff \'c0\u1740?\'9f \'ca\'c7\'98\'c0 \'c2\'81 \'98\u1740? \'d6\'d1\'e6\'d1\u1740?\'c7\'ca \'81\'e6\'d1\u1740? \'c0\'e6\'9f\u1748?\f0\ltrch\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+ChatGPT can make mistakes. Check important info.\par
+\lang1033 ?\lang9\par
+}
+ 

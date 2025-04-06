@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(./assests/image/e1.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+}
+header {
+    height: 8em;
+    width: 100%;
+    background-color: aqua;
+    align-content: center;
+    padding: 1em;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.navbar button {
+    margin-right: 2em;
+    background-color: red;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    border-radius: 0.25em;
+}
+.navbar button:hover {
+    background-color: rgb(218, 0, 0);
+    cursor: pointer;
+}
+main {
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+.heading-container {
+    width: 30em;
+    padding: 1em;
+    background-color: aqua;
+
+}

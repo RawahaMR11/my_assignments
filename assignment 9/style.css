@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito,sans-serif;
+}
+.main-header {
+    background-color: white;
+}
+.demo {
+    height: 2.8em;
+    background-color: #0067EC;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    color: white;
+}

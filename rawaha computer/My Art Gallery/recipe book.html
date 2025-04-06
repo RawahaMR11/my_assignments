@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shah Recipes</title>
+      <link rel="stylesheet" href="recipe book.css">
+</head>
+<body>
+<div class="my-display">
+      <header>
+            <div id="logo">
+                  <img src="logo.png">
+            </div>
+            <div class="search">
+                  <select name="All" id="all">
+                        <option>All</option>
+                  </select>
+                  <input type="text" placeholder="Search me" id="search-box">
+                  <img src="search.png" id="search-icon">
+            </div>
+
+            <nav class="main">
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Art Gallery</a></li>
+                      <li><a href="#">Artists</a></li>
+                      <li><a href="#">Description</a></li>
+                      <li><img src="sign in.png" alt="Login"></li>
+                  </ul>
+              </nav>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+      </div>
+</header>
+
+
+      <div class="navigation"> 
+            <div class="nav">
+                  <h1>Delicious Recipes</h1>
+                  <div id="image">
+                        <img src="baryanii.png" alt="biryani">
+                        <div id="info">
+                              <h2>Biryani Recipe</h2>
+                        <p>Biryani is flavoured and aromatic rice dash, popular in Pakistan and India.This recipe will guide you to make the best biryani for your family and friends.</p>
+                        <div id="btn1"><button>Back</button></div>
+                        </div>
+                  </div>
+                  <div id="image2">
+                        <div id="ingredient">
+                              <h1>Ingredients:</h1>
+                        <ul>
+                              <li>2 cups of basmati rice</li>
+                              <li>1 kilo chicken, cut into pieces</li>
+                              <li>1 large onion,sliced</li>
+                              <li>4 tomatos, chopped</li>
+                              <li>1/2 cup plain yogurt</li>
+                              <li>1 tsp ginger-garlic paste</li>
+                              <li>1 tsp tumeric powder</li>
+                              <li>1 tsp red chilli powder</li>
+                              <li>1 tsp garam masala</li>
+                              <li>4 cups water</li>
+                              <li>Salt to taste</li>
+                              <li>Fresh coriander and mint leaves for garnish</li> 
+                        </ul>
+                        </div>
+                        <img src="baryani.png" alt="biryani">
+                  </div>
+
+                  <div class="instruction">
+                        <h1>Insructions:</h1>
+                        <ol>
+                              <li>Wash and soak the basmati rice for about 30 minutes</li>
+                              <li>Heat oil in a large pot and saute the sliced onions until golden brown</li>
+                              <li>Add the ginger-garlic paste and saute for 1 minute</li>
+                              <li>Mix the chicken pieces and cooked until they are lightly browned</li>
+                              <li>Add the chopped tomatos, yogurt, and spices.Cook until the mixture thicken</li>
+                              <li>Boil 4 cups of water in aseparate pot.Add the soaked rice and cook until 70% done</li>
+                              <li>Layer the rice and chicken mixture in the pot.Garnish with coriander and mint leaves</li>
+                              <li>Cover and cook on low heat for 20 minutes to let the flavors meld togather</li>
+                              <li>Serve hot with raitha and salaad</li>
+                        </ol>
+                  </div>
+            </div>
+      </div>
+
+      <footer>
+            <p>&copy; Copyright, 2024 Shah Designs</p>
+      </footer>
+</div><!--end my-display-->
+
+      <script>
+            const btn1 = document.getElementById("btn1");
+
+            btn1.addEventListener("click", function() {
+                  //opening a new page by giving address
+                  window.location.href= "Art Gallery.html";
+                  style.color = "red"
+            })
+      </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Javascript practice</title>
+</head>
+<body>
+      <!-- <div id="hotel1"></div>
+      <div id="pool" style="margin-top: 5px; width: 100%; height: 20px; background-color: black; color: white;"></div>
+      <div id="gym"  style="margin-top: 5px; width: 100%; height: 20px; background-color: rgb(201, 15, 15); color: white;"><div class="Gym"></div></div>
+     <div id="screen"></div> -->
+<div id="parkName"></div>
+<div id="ticketRate"></div>
+<div id="specialRate"></div>
+<div id="offerEnd"></div>
+      <script>
+            // function Hotel(name, rooms, booked) {
+            //       this.name = name;
+            //       this.rooms = rooms;
+            //       this.checkAvailability = function () {
+            //             return this.roomsn - this.booked;
+
+            //       };
+            // }
+
+            // var quaryHotel = new Hotel ('Quary', 40, 25);
+            // var parkHotel = new Hotel ('Park', 120, 77);
+
+            // var detail1 = quaryHotel.name + 'rooms: ';
+            //     detail1 += quaryHotel.checkAvailability();
+            // var elHotel1 = document.getElementById('hotel1');
+            // elHotel1.textContent = detail1;
+
+
+
+            // var detail2 = parkHotel.name + 'rooms: ';
+            // detail2 += parkHotel.checkAvailability();
+            // var elHotel2 = document.getElementById('hotel2');
+            // elHotel2.textContent = detail2;
+
+            // var hotel = {
+            //       name : 'Hujra',
+            //       rooms : 100,
+            //       booked : 66,
+            // };
+
+            // hotel.gym = true;
+            // hotel.pool = false;
+            // delete hotel.booked;
+
+            // var elName = document.getElementById('hotel1');
+            // elName.textContent = hotel.name;
+
+            // var elPool = document.getElementById('pool');
+            // elPool.className = 'pool: ' + hotel.pool;
+
+            // var elGym = document.getElementById('gym');
+            // elGym.className = 'Gym: '+ hotel.gym; 
+
+            // function windowSize() {
+            //       var width= this.innerWidth;
+            //       var height = this.innerHeight;
+            //       return [width, height];
+            // }
+
+            // var shape = {
+            //       width : 1000,
+            //       height : 500,
+            //       getArea : function () {
+            //             return this.width * this.height
+            //       }
+
+            // };
+
+            // var msg = ' <h2>Browser Window</h2><p>width:' + window.innerWidth + '</p>';
+
+            // msg += '<p>Height: ' + window.innerHeight + '<p>';
+
+            // msg += '<h2>History<h2> <p>items: ' + window.history.length + '</p>';
+            // msg += '<h2>Screen</h2><p>width: ' + window.screen.width + '</p>';
+            // msg += '<p>Height: ' + window.screen.height + '</p>';
+
+
+            // var el = document.getElementById('screen');
+            // el.innerHTML = msg;
+            // alert('Current page: ' + window.location);
+
+
+
+
+            // var msg = '<p><b>page title: </b>' + document.title + '<br />';
+            // msg += '<b>page address: </b>' + document.URL + '<br />';
+            // msg += '<b>last modified: </b>' + document.lastModified + '</p>';
+
+            // var el = document.getElementById('footer');
+            // el.innerHTML = msg;
+
+
+//             var saying = "Home sweet home";
+
+//             var msg = '<br/><h2>Length</h2><p>' + saying.length + '</p>';
+//                 msg = '<h2>upperCase</h2><p>' + saying.toUpperCase() + '</p>';
+//                 msg = '<h2>Character index</h2><p>' + saying.charAt + '</p>';
+//                 msg = '<h2>First ee</h2><p>' + saying.indexOf + '</p>';
+//                 msg = '<h2>Last e</h2><p>' + saying.lastIndexOf + '</p>';
+//                 msg = '<h2>Character index</h2><p>' + saying.substring(6,14) + '</p>';
+//                 msg = '<h2>Replace</h2><p>' + saying.replace('me', 'w') + '</p>';
+
+//                 var el = document.getElementById('practice');
+//                 el.innerHTML = msg;
+
+
+
+
+
+                  // var originalNumber = 31.645892;
+                  // var msg = '<h2>Original Number</h2><p>' + originalNumber + '</p>';
+                  //     msg = '<h2>Tofixed</h2><p>' + originalNumber.toFixed(3); '</p>';
+                  //     msg = '<h2>toPrecision</h2><p>' + originalNumber.toPrecision(3) + '</p>';
+                      
+                  //     var elNumbers = document.getElementById('practice');
+                  //     elNumbers.innerHTML = msg;
+
+                  // var randomNumber = Math.floor((Math.random() * 16) + 1);
+
+                  // var elRandom = document.getElementById("footer");
+                  // elRandom.innerHTML = '<h2>random number</h2><p>' + randomNumber + '</p>';
+
+
+
+
+
+                  // var today = new Date();
+                  // var year = today.getFullYear();
+                  // var est = new Date('dec 20, 2000 12:46:50');
+                  // var differece = today.getTime() - est.getTime();
+                  // differece = (differece/31556900000);
+
+                  // var elDate =document.getElementById('footer');
+                  // elDate.textContent = Math.floor(differece) + 'Year of the online travel advice';
+
+
+
+
+
+
+
+
+
+                  //Now I am using all the methods and function that I have studies in this chapter means summary example.
+                  // (function () {
+                  //       var park = {
+                  //             name: 'Tatara',
+                  //             cafeteria: 1,
+                  //             Train: 1,
+                  //             Jujhain: 10,
+                  //             ticketRate: 150,
+                  //             discount: 15,
+                  //             offerPrice: function () {
+                  //                   var offerRate = this.ticketRate * ((100 - this.discount))/ 100;
+                  //             }
+                  //       }
+
+                  //       var parkName, ticketRate, specialRate;
+                        
+                  //       parkName = document.getElementById('parkName');
+                  //       ticketRate = document.getElementById('ticketRate');
+                  //       specialRate = document.getElementById('specialRate');
+
+
+                  //       parkName.textContent = park.name;
+                  //       ticketRate.textContent = 'RS' + park.ticketRate.toFixed(2);
+                  //       specialRate.textContent = 'RS' + park.offerPrice();
+
+
+
+                  //       //Part two:
+
+                  //       var expiryMsg;
+                  //       var today;
+                  //       var elEnds;
+
+
+
+                  //       function offerExpires (today){
+                  //             var weekFromToday, day, date, month, year,dayName,monthName;
+
+
+                  //             weekFromToday = new Date (today.getTime() + 7 * 24 * 60 * 60 * 1000);
+
+                  //             dayName = ['sunday', 'monday', 'thuesday','wednessday', 'thursday', 'friday', 'satureday'];
+
+                  //             monthName = ['January', 'February', 'March', 'April', 'May', ' Jun', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                  //             day = dayName[weekFromToday.getDay()];
+                  //             month = monthName[weekFromToday.getMonth()];
+                  //             year = weekFromToday.getFullYear();
+
+
+                  //             expiryMsg = 'Offer Expired';
+                  //             expiryMsg += day + '<br/>(' + date +'' + month +'' + year +')';
+                  //             return expiryMsg;
+                  //       }
+                  //       today = new Date();
+                  //       elEnds = document.getElementById('offerEnd');
+                  //       elEnds.innerHTML = offerExpires(today);
+                  // }());
+
+
+
+
+
+                  
+     </script>
+</body>
+ </html>

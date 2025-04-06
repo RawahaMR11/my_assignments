@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+<div class="my-display">
+      <header>
+            <div id="logo">
+                  <img src="logo.png">
+            </div>
+            <div class="search">
+                  <select name="All" id="all">
+                        <option>All</option>
+                  </select>
+                  <input type="text" placeholder="Search me" id="search-box">
+                  <img src="search.png" id="search-icon">
+            </div>
+
+            <nav class="main">
+                  <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Art Gallery</a></li>
+                      <li><a href="#">Artists</a></li>
+                      <li><a href="#">Description</a></li>
+                      <li><img src="sign in.png" alt="Login"></li>
+                  </ul>
+              </nav>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+      </div>
+</header>
+
+<div class="navigation">
+    <div class="nav">
+        <h1>7 Days Weather Forecast</h1>
+           <table>
+                  <tr>
+                       <td id="td1">S.No</td>
+                       <td id="td2">Day</td>
+                       <td id="td3">Date</td>
+                       <td id="td4">Location</td>
+                       <td id="td5">Temp &deg;C</td>
+                       <td id="td6">Sunny</td>
+                       <td id="td7">Clody</td>
+                  </tr>
+
+                  <tr>
+                    <td id="td8">1</td>
+                    <td id="td9">Sunday</td>
+                    <td id="td10">12/9/2024</td>
+                    <td id="td11">Peshawar</td>
+                    <td id="td12">15 &deg;C</td>
+                    <td id="td13">45.41%</td>
+                    <td id="td14">54.59%</td>
+                  </tr>
+                  <tr>
+                    <td id="td8">2</td>
+                    <td id="td9">Monday</td>
+                    <td id="td10">12/10/2024</td>
+                    <td id="td11">Peshawar</td>
+                    <td id="td12">13.11 &deg;C</td>
+                    <td id="td13">74.56%</td>
+                    <td id="td14">25.46%</td>
+                  </tr>
+                  <tr>
+                    <td id="td8">3</td>
+                    <td id="td9">Thuesday</td>
+                    <td id="td10">12/11/2024</td>
+                    <td id="td11">Peshawar</td>
+                    <td id="td12">16.55 &deg;C</td>
+                    <td id="td13">60.89%</td>
+                    <td id="td14">39.19%</td>
+                  </tr>
+                  <tr>
+                    <td id="td8">4</td>
+                    <td id="td9">Wednessday</td>
+                    <td id="td10">12/12/2024</td>
+                    <td id="td11">Peshawar</td>
+                    <td id="td12">11.88 &deg;C</td>
+                    <td id="td13">29.45%</td>
+                    <td id="td14">70.55%</td>
+                  </tr>
+
+                  <tr>
+                    <td id="td8">5</td>
+                    <td id="td9">Thursday</td>
+                    <td id="td10">12/13/2024</td>
+                    <td id="td11">Peshawar</td>
+                    <td id="td12">14.29 &deg;C</td>
+                    <td id="td13">90.37%</td>
+                    <td id="td14">9.63%</td>
+                  </tr>
+                  <tr>
+                    <td id="td8">6</td>
+                    <td id="td9">Friday</td>
+                    <td id="td10">12/14/2024</td>
+                    <td id="td11">Peshawar</td>
+                    <td id="td12">15.68 &deg;C</td>
+                    <td id="td13">2.9%</td>
+                    <td id="td14">98.1%</td>
+                  </tr>
+
+                  <tr>
+                    <td id="td8">7</td>
+                    <td id="td9">Saturday</td>
+                    <td id="td10">12/15/2024</td>
+                    <td id="td11">Peshawar</td>
+                    <td id="td12">17.42 &deg;C</td>
+                    <td id="td13">36.71%</td>
+                    <td id="td14">63.29%</td>
+                  </tr>
+                       
+                  
+           </table>
+    </div>
+    <button id="btn1">Back</button>
+</div>
+      <footer>
+            <p>&COPY; copyright, 2024 Shah Designs</p>
+      </footer>
+</div><!--end my-display-->
+
+
+
+<script>
+    const btn1 = document.getElementById("btn1");
+
+    btn1.addEventListener("click", function () {
+        //we want to go back into the Art Gallery
+        window.location.href = "Art Gallery.html";
+    })
+</script>
+</body>
+</html>

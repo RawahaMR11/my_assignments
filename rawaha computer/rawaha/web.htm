@@ -1,0 +1,895 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 TRANSITIONAL//EN">
+
+<html lang="en,us">
+
+<head>
+
+   <title>J2EE and Internet Applications - Oracle Application Server Documentation</title>
+
+   <link rel="stylesheet" type="text/css" href="iasdoc.css">
+
+</head>
+
+<body bgcolor="#ffffff">
+
+
+
+<table cellspacing="0" cellpadding="0" border="0" summary="This is a simple table to format the Branding, Feedback, and Help Buttons" width="100%">
+
+   <tr>
+
+   <td nowrap valign="top">
+
+      <p class="title2"><img src="images/doc_library.gif" alt="Oracle Application Server Documentation Library">
+
+      <br>10<i>g</i> Release 2 (10.1.2)
+
+   </td>
+
+   <td width="100%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="mix.1012/b14006/toc.htm"><img border=0 src="images/glossary.gif" alt="Master Glossary"></a>
+
+      <br><a href="mix.1012/b14006/toc.htm">Master Glossary</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="mix.1012/b14005/toc.htm"><img border=0 src="images/index.gif" alt="Master Index"></a>
+
+      <br><a href="mix.1012/b14005/toc.htm">Master Index</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="nav/docindex.htm"><img border=0 src="images/allbooks.gif" alt="All Books"></a>
+
+      <br><a href="nav/docindex.htm">All Books</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="mailto:appserverdocs_us@oracle.com"><img border=0 src="images/contact.gif" alt="Contact Us"></a>
+
+      <br><a href="mailto:appserverdocs_us@oracle.com">Contact Us</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="nav/help.htm"><img border=0 src="images/help.gif" alt="Help"></a>
+
+      <br><a href="nav/help.htm">Help</a>
+
+   </td>
+
+   </tr>
+
+</table>
+
+
+
+<a name="tabs"></a>
+
+<a href="#portlets"><img src="images/null.gif" alt="Skip tabs" border=0></a>
+
+<table cellspacing="0" cellpadding="0" border="0" summary="Navigation Tabs" width="100%">
+
+   <tr>
+
+      <td scope="col" class="tabs" width="100%"><a href="index.htm"><img src="images/i_home.gif" alt="[Home]" border=0></a> <img src="images/j2ee_apps_a.gif" alt="[Selected: J2EE and Internet Applications]" border=0><a href="portal.htm"><img src="images/i_portals.gif" alt="[Portals]" border=0></a> <a href="wireless.htm"><img src="images/i_wireless.gif" alt="[Wireless]" border=0></a> <a href="caching.htm"><img src="images/i_caching.gif" alt="[Caching]" border=0></a> <a href="bi.htm"><img src="images/i_business.gif" alt="[Business Intelligence]" border=0></a> <a href="integrate.htm"><img src="images/i_ebusiness.gif" alt="[E-Business Integration]" border=0></a> <a href="idmanage.htm"><img src="images/i_identity_management.gif" alt="[Identity Management and Security]" border=0></a> <a href="manage.htm"><img src="images/i_system_management.gif" alt="[System Management]" border=0></a></td>
+
+   </tr>
+
+</table>
+
+
+
+<a name="portlets"></a>
+
+<span style="font-size: 1pt;">
+
+<img src="images/null.gif" alt="Select a topic from the following list:" border=0>
+
+<a href="#intro"><img src="images/null.gif" alt="Introduction" border=0></a>
+
+<a href="#http"><img src="images/null.gif" alt="Oracle HTTP Server" border=0></a>
+
+<a href="#plsql"><img src="images/null.gif" alt="Oracle Application Server PL/SQL" border=0></a>
+
+<a href="#websvc"><img src="images/null.gif" alt="Oracle Application Server Web Services" border=0></a>
+
+<a href="#dev"><img src="images/null.gif" alt="Oracle XML Developer Kit" border=0></a>
+
+
+
+<a href="#forms"><img src="images/null.gif" alt="Oracle Application Server Forms Services" border=0></a> 
+
+
+
+<a href="#oc4j"><img src="images/null.gif" alt="Oracle Application Server Containers for J2EE" border=0></a>
+
+<a href="#toplink"><img src="images/null.gif" alt="Oracle Application Server TopLink" border=0></a>
+
+<a href="#bc4j"><img src="images/null.gif" alt="Oracle Application Development Framework" border=0></a>
+
+
+
+<a href="#mapviewer"><img src="images/null.gif" alt="Oracle Application Server MapViewer" border=0></a>
+
+
+
+
+
+</span>
+
+
+
+<table border=0 frame="void" rules="none" width="100%" cellpadding=0 cellspacing=0 summary="Main Window">
+
+<tr>
+
+   <!-- main window, left column -->
+
+   <td scope="col" valign="top" width="49%">
+
+      <a name="intro"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Introduction</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary="Introduction"><tr><td scope="col" class="RegionBorder">
+
+         <p class="text">Oracle Application Server provides a fully integrated J2EE (Java 2 Platform, Enterprise Edition)
+
+         compliant platform to develop and deploy Internet applications, Web sites, portals, or browser-based applications.</p>
+
+
+
+         <p class="text">With Oracle Application Server you can build Internet applications using the languages
+
+         and technologies that are familiar to your development teams.</p>
+
+      </td></tr></table>
+
+
+
+      <p>
+
+      <a name="http"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle HTTP Server</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle HTTP Server Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Administrator's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14007/toc.htm" title="Oracle HTTP Server Administrator's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14007.pdf" title="Oracle HTTP Server Administrator's Guide PDF">PDF</a></td>
+
+         </tr>
+
+
+
+ <tr>
+
+            <td scope="row" width="100%" class="text">Administering a Standalone Deployment Based on Apache 1.3</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14008/toc.htm" title="Oracle HTTP Server Administering a Standalone Deployment Based on Apache 1.3 HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14008.pdf" title="Oracle HTTP Server Administering a Standalone Deployment Based on Apache 1.3 PDF">PDF</a></td>
+
+         </tr>
+
+
+
+ <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Administering a Standalone Deployment Based on Apache 2.0</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14009/toc.htm" title="Oracle HTTP Server Administering a Standalone Deployment Based on Apache 2.0 HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14009.pdf" title="Oracle HTTP Server Administering a Standalone Deployment Based on Apache 2.0 PDF">PDF</a></td>
+
+         </tr>
+
+
+
+
+
+
+
+ <tr>
+
+            <td scope="row" width="100%" class="text">HTTPClient API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14020/toc.htm" title="Oracle Application Server HTTPClient API Reference HTML">Javadoc</a></td>
+
+           
+
+
+
+      
+
+<!--
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Apache User's Guide</td>
+
+            <td valign="top" class="text" valign="top"><!a href="web.1012/q20201/index.html" title="Apache User's Guide">HTML</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Apache JServ</td>
+
+            <td valign="top" class="text"><!a href="web.1012/q20202/index.html" title="Apache JServ Documentation">HTML</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Apache mod_perl Guide</td>
+
+            <td valign="top" class="text"><!a href="web.1012/q20203/index.html" title="Apache mod_perl Documentation HTML">HTML</a></td>
+
+            <td valign="top" class="text"><!a href="web.1012/q20203.pdf" title="Apache mod_perl Documentation PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" colspan=3 class="OraDarkPortletHeader">FastCGI</td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Module mod_fastcgi</td>
+
+            <td valign="top" class="text"><!a href="web.1012/q20204/mod_fastcgi.html" title="Module mod_fastcgi HTML">HTML</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">FastCGI Developer's Kit</td>
+
+            <td valign="top" class="text"><!a href="web.1012/q20205/fcgi-devel-kit.htm" title="FastCGI Developer's Kit HTML">HTML</a></td>
+
+         </tr>
+
+
+
+
+
+ <tr>
+
+            <td scope="row" width="100%" class="text">Apache 2.0 Documentation</td>
+
+            <td valign="top" class="text"><!a href="web.1012/q20206/index.html" title="Apache 2.0 Documentation HTML">HTML</a></td>
+
+         </tr>
+
+
+
+-->
+
+         </table>
+
+      </td></tr></table>
+
+
+
+ <p>
+
+      <a name="plsql"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server PL/SQL</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server PL/SQL Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+
+
+            <td scope="row" width="100%" class="text">mod_plsql User's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14010/toc.htm" title="mod_plsql User's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14010.pdf" title="mod_plsql User's Guide PDF">PDF</a></td>
+
+         </tr>
+
+	<tr>
+
+            <td scope="row" width="100%" class="text">Web Toolkit Reference</td>
+
+            <td valign="top" class="text"><a href="web.1012/b15896/toc.htm" title="Web Toolkit Reference HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b15896.pdf" title="Web Toolkit Guide PDF">PDF</a></td>
+
+         </tr>
+
+ </table>
+
+      </td></tr></table>
+
+
+
+
+
+      <p>
+
+      <a name="websvc"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server Web Services</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server Web Services Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Developer's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14027/toc.htm" title="Oracle Application Server Web Services Developer's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14027.pdf" title="Oracle Application Server Web Services Developer's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Proxy API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b10395/index.html" title="Oracle Application Server Web Services Proxy API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">UDDI Client API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b13971/index.html" title="Oracle Application Server Web Services UDDI Client API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Oracle Application Server SOAP API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b10397/index.html" title="OracleAS SOAP API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+
+
+ <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Apache SOAP API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/q20234/index.html" title="Apache SOAP API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+         </table>
+
+      </td></tr></table>
+
+
+
+      <p>
+
+      <a name="dev"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle XML Developer Kit</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle XML Developer Kit Documentation" cellspacing=0 cellpadding=2>
+
+
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Programmer's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14033/toc.htm" title="XML API Reference HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14033.pdf" title="XML API Reference PDF">PDF</a></td>
+
+         </tr>
+
+  <tr>
+
+            <td scope="row" width="100%" class="text">XML API Reference</td>
+
+            <td valign="top" class="text"><a href="web.1012/b10789/toc.htm" title="XML API Reference HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b10789.pdf" title="XML API Reference PDF">PDF</a></td>
+
+         </tr>     
+
+<tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">XML Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b12024/index.html" title="XML Java API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+
+
+         </table>
+
+      </td></tr></table>
+
+
+      <p>
+
+      <a name="forms"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server Forms Services</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server Forms Services Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Deployment Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14032/toc.htm" title="OracleAS Forms Services Deployment Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14032.pdf" title="OracleAS Forms Services Deployment Guide PDF">PDF</a></td>
+
+         </tr>
+
+         </table>
+
+      </td></tr></table>
+
+
+
+
+ </td>
+
+
+
+   <!-- spacer -->
+
+   <td scope="col" width="2%">&nbsp;</td>
+
+
+
+   <!-- main window, right column -->
+
+   <td scope="col" valign="top" width="49%">
+
+      <p>
+
+      <a name="oc4j"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server Containers for J2EE (OC4J)</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server Containers for J2EE Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">User's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14011/toc.htm" title="OC4J User's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14011.pdf" title="OC4J User's Guide PDF">PDF</a></td>
+
+         </tr>
+
+
+
+ <tr>
+
+            <td scope="row" width="100%" class="text">Standalone User's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14361/toc.htm" title="OC4J Standalone User's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14361.pdf" title="OC4J Standalone User's Guide PDF">PDF</a></td>
+
+         </tr>
+
+
+
+
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Services Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14012/toc.htm" title="OC4J Services Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14012.pdf" title="OC4J Services Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Security Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14013/toc.htm" title="OC4J Security Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14013.pdf" title="OC4J Security Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Support for JavaServer Pages Developer's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14014/toc.htm" title="OC4J Support for JavaServer Pages Developer's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14014.pdf" title="OC4J Support for JavaServer Pages Developer's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Support for JavaServer Pages API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14015/toc.htm" title="OC4J Support for JavaServer Pages API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">JSP Tag Libraries and Utilities Reference</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14016/toc.htm" title="OC4J JSP Tag Libraries and Utilities Reference HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14016.pdf" title="OC4J JSP Tag Libraries and Utilities Reference PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Servlet Developer's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14017/toc.htm" title="OC4J Servlet Developer's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14017.pdf" title="OC4J Servlet Developer's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Enterprise JavaBeans Developer's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b15505/toc.htm" title="OC4J Enterprise JavaBeans Developer's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b15505.pdf" title="OC4J Enterprise JavaBeans Developer's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Java Object Cache API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14018/toc.htm" title="OC4J Java Object Cache API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">JAAS Provider API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14019/toc.htm" title="OC4J JAAS Provider API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+<tr>
+
+            <td scope="row" width="100%" class="text">Multimedia Tag Libary for JSP User's Guide and Reference</td>
+
+            <td valign="top" class="text"><a href="web.1012/b10445/toc.htm" title="Multimedia Tag Libary for JSP User's Guide and Reference HTML">HTML</a></td>
+
+ <td valign="top" class="text"><a href="web.1012/b10445.pdf" title="Multimedia Tag Libary for JSP User's Guide and Reference PDF">PDF</a></td>
+
+        
+
+
+
+ </tr>
+
+
+
+
+
+         </table>
+
+      </td></tr></table>
+
+
+
+      <p>
+
+      <a name="toplink"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server TopLink</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server TopLink Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Getting Started Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b15902/toc.htm" title="OracleAS TopLink Getting Started Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b15902.pdf" title="OracleAS TopLink Getting Started Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">Mapping Workbench User's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b15900/toc.htm" title="OracleAS TopLink Mapping Workbench User's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b15900.pdf" title="OracleAS TopLink Mapping Workbench User's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Application Developer's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b15901/toc.htm" title="OracleAS TopLink Application Developer's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b15901.pdf" title="OracleAS TopLink Application Developer's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         <tr>
+
+            <td scope="row" width="100%" class="text">API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b15903/index.html" title="OracleAS TopLink API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+         </table>
+
+      </td></tr></table>
+
+
+
+      <p>
+
+      <a name="bc4j"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Development Framework</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Development Framework Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Development Guidelines Manual</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14362/toc.htm" title="Oracle Application Development Framework Development Guidelines Manual HTML">HTML</a></td>
+
+ <td valign="top" class="text"><a href="web.1012/b14362.pdf" title="Oracle Application Development Framework Development Guidelines Manual PDF">PDF</a></td>
+
+         </tr>
+
+
+ <tr>
+
+            <td scope="row" width="100%" class="text">Case Manual</td>
+
+            <td valign="top" class="text"><a href="web.1012/b19163/toc.htm" title="Oracle Application Development Framework Case Manual HTML">HTML</a></td>
+
+ <td valign="top" class="text"><a href="web.1012/b19163.pdf" title="Oracle Application Development Framework Case Manual PDF">PDF</a></td>
+
+         </tr>
+
+
+
+  <tr class="tablehilight">
+
+       <td scope="row" width="100%" class="text">Controller API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14363/index.html" title="Oracle Application Development Framework Controller API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+ <tr>
+
+      <td scope="row" width="100%" class="text">Model and Business Components API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14022/index.html" title="Oracle Application Development Framework Model and Business Components API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+ <tr class="tablehilight">
+
+      <td scope="row" width="100%" class="text">Business Components Domains API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14023/index.html" title="Oracle Application Development Framework Business Components Domains API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+ <tr>
+
+      <td scope="row" width="100%" class="text">Business Components Generic Domains API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14024/index.html" title="Oracle Application Development Framework Business Components Generic Domains API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+ <tr class="tablehilight">
+
+     <td scope="row" width="100%" class="text">Business Components interMedia Domains API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="web.1012/b14025/index.html" title="Oracle Application Development Framework Business Components interMedia Domains API Reference Javadoc">Javadoc</a></td>
+
+         </tr>
+
+
+
+
+
+         </table>
+
+      </td></tr></table>
+
+
+
+
+
+ <p>
+
+      <a name="mapviewer"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server MapViewer</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server MapViewer Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">User's Guide</td>
+
+            <td valign="top" class="text"><a href="web.1012/b14036/toc.htm" title="OracleAS MapViewer User's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="web.1012/b14036.pdf" title="OracleAS MapViewer User's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         </table>
+
+      </td></tr></table>
+
+
+
+
+
+   </td>
+
+</tr></table>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" summary="border">
+
+   <tr><td scope="col" class="tabs" width="100%"><img src="images/null.gif" alt="lower border" height=30></td></tr>
+
+</table>
+
+
+
+<p class="copyright"><img src="dcommon/gifs/oracle.gif" alt="Oracle Corporation" border="0">
+
+<br><a href="dcommon/html/cpyr.htm">Copyright &copy; 2002, 2005 Oracle</a>
+
+<br>All Rights Reserved.</p>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

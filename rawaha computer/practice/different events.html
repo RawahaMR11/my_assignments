@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Different events</title>
+</head>
+<body>
+      <!-- <h1>Account</h1>
+      <label for="username">username</label>
+      <input type="text" name="username" id="username">
+      <div id="feedback"></div>
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+      <input type="submit" name="submit" value="submit" id="submit"> -->
+
+      <div id="body">  
+                   <div id="sx">ScreenX</div>
+                   <div id="sy">screenY</div>
+                   <div id="px">pageX</div>
+                   <div id="py">pageY</div>
+                   <div id="cx">clientX</div>
+                   <div id="cy">clientY</div>
+      </div>
+
+
+
+
+
+
+      <script>
+            // function setup() {
+            //       var textInput;
+            //       textInput = document.getElementById('username');
+            //       textInput.focus();
+            // }
+
+            // window.addEventListener('load', setup, false);
+
+
+
+
+            // function checkUsername () {
+            //         var username = el.value;
+            //         if (username.length < 5) {
+            //             elMsg.className ='warning';
+            //             elMsg,textContent = 'Not long enouph, yet...';
+            //         }else {
+            //             elMsg.textContent = '';
+            //         }
+
+            // }
+
+            // function tipUsername () {
+            //       elMsg.className = 'tip';
+            //       elMsg.innerHTML = 'username must be at least 5 characters';
+
+            // }
+
+
+            // var el = document.getElementById('username');
+            // var elMsg = document.getElementById('feedback');
+
+            // el.addEventListener('focus', tipUsername, false);
+            // el.addEventListener('blur', checkUsername, false);
+
+
+
+
+            // var msg = '<div class=\"header\"> <a id=\"close\" href="#"> Close Button </a></div>';
+            // msg += '<div><h2>system maintanance</h2>';
+            // msg += 'Our services are being updated between 3 and 4 a.m. ';
+            // msg += 'During this time, there may be minor disruption to services. </div>';
+            
+            
+            // var elNote = document.createElement('div');
+            // elNote.setAttribute('id', 'note');
+            // elNote.innerHTML = msg;
+            // document.body.appendChild(elNote);
+
+            // function dismissNote () {
+            //       document.body.removeChild(elNote);
+
+            // }
+
+
+            // var elClose = document.getElementById('close');
+            // elClose.addEventListener('click', dismissNote, false);
+
+
+
+
+            var sx = document.getElementById('sx');
+            var sy = document.getElementById('sy');
+            var px = document.getElementById('px');
+            var py = document.getElementById('py');
+            var cx = document.getElementById('cx');
+            var cy = document.getElementById('cy');
+
+
+            function showPosition(event) {
+                  sx.value = event.screenX;
+                  sy.value = event.screenY;
+                  px.value = event.pageX;
+                  py.value = event.pageY;
+                  cx.value = event.clientX;
+                  cy.value = event.clientY;
+            }
+
+            var el = document.getElementById('body')
+            el.addEventListener('mousemove', showPosition, false);
+
+
+
+
+
+
+
+            
+
+      </script>
+</body>
+</html>

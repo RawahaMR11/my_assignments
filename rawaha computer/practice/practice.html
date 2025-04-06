@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.example.com/" target="_blank">
+    <title>sign in</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (max-width: 768px){
+            body {
+                font-size: 14px;
+                font-family: sans-serif;
+                font-weight: 700;
+            }
+            .main {
+                height: 150vh;
+                width: 768px;
+                font-family: sans-serif;
+                display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            .wrapper {
+                width: 30%;
+                font-family: sans-serif;
+                background-color: rgb(189, 189, 189);
+            padding: 3vh;
+            border-radius: 1vh;
+            box-shadow: 2vh 2vh 3vh rgb(89, 89, 89);
+            margin-top: 40vh;
+            }
+            .wrapper h1 {
+            text-align: center;
+            }
+            form {
+                width: 100%;
+                font-size: 10px;
+                font-family: sans-serif;
+                margin-top: 8vh;
+            }
+            input {
+                width: 100px;
+                padding: 2px;
+                font-size: 9px;
+                font-family: sans-serif;
+            }
+            label {
+                font-size: 8px;
+                font-family: sans-serif;
+                margin-right: 1vh;
+            }
+            form #Password {
+                margin-left: 2px;
+            }
+            
+            .wrapper #email {
+                margin-left: 16.3px;
+            }
+            .wrapper button {
+                width: 38%;
+                font-size: 12px;
+                padding: 3px;
+                margin-left: 43px;
+                border-radius: 3px;
+            }
+            #sign-up {
+        float: left;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+       #fpassword {
+        float: right;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+        }
+        @media screen and (max-width: 580px) {
+            body {
+                font-size: 8px;
+                font-family: sans-serif;
+                font-weight: 700;
+            }
+            .main {
+                height: 100vh;
+                width: 580px;
+                font-family: sans-serif;
+                display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            .wrapper {
+                width: 30%;
+                font-family: sans-serif;
+                background-color: rgb(189, 189, 189);
+            padding: 3vh;
+            border-radius: 1vh;
+            box-shadow: 2vh 2vh 3vh rgb(89, 89, 89);
+            margin-top: 100vh;
+            }
+            .wrapper h1 {
+            text-align: center;
+            }
+            form {
+                width: 100%;
+                font-size: 8px;
+                font-family: sans-serif;
+                margin-top: 8vh;
+            }
+            input {
+                width: 55px;
+                padding: 2px;
+                font-size: 8px;
+            }
+            label {
+                font-size: 10px;
+                margin-right: 1vh;
+            }
+            .wrapper #email {
+                margin-left: 16.3px;
+            }
+            .wrapper button {
+                width: 35%;
+                font-size: 10px;
+                padding: 2px;
+                margin-left: 3px;
+                border-radius: 2px;
+            }
+        #sign-up {
+        float: left;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+       #fpassword {
+        float: right;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+        }
+        @media screen and (max-width: 1080px){
+            body {
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 700;
+            }
+            .main {
+                height: 100vh;
+                width: 1080px;
+                font-family: sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .wrapper {
+                width: 30%;
+                font-family: sans-serif;
+                background-color: rgb(189, 189, 189);
+            padding: 3vh;
+            border-radius: 1vh;
+            box-shadow: 2vh 2vh 3vh rgb(89, 89, 89);
+            }
+            .wrapper h1 {
+            text-align: center;
+            }
+            form {
+                width: 100%;
+                font-size: 14px;
+                font-family: sans-serif;
+                margin-top: 8vh;
+            }
+            input {
+                width: 200px;
+                padding: 8px;
+                font-size: 12px;
+                outline: none;
+        border: none;
+        border-radius: 0.5vh;
+            }
+            form  #password {
+        margin-top: 4vh;
+       }
+            label {
+                font-size: 14px;
+                margin-right: 1vh;
+            }
+            .wrapper #email {
+                margin-left: 28px;
+            }
+            .wrapper button {
+                width: 50%;
+                font-size: 16px;
+                padding: 5px;
+                border-radius: 5px;
+                background-color: blue;
+        border: none;
+        margin: 6vh 16vh 0;
+        font-weight: 700;
+        font-family: sans-serif;
+            }
+            form #sign-up {
+        float: left;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+       #fpassword {
+        float: right;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+        }
+
+        @media screen and (min-width: 1080px){
+            body {
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 700;
+            }
+            .main {
+                height: 100vh;
+                width: 1080px;
+                font-family: sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .wrapper {
+                width: 30%;
+                font-family: sans-serif;
+                background-color: rgb(189, 189, 189);
+            padding: 3vh;
+            border-radius: 1vh;
+            box-shadow: 2vh 2vh 3vh rgb(89, 89, 89);
+            }
+            .wrapper h1 {
+            text-align: center;
+            }
+            form {
+                width: 100%;
+                font-size: 14px;
+                font-family: sans-serif;
+                margin-top: 8vh;
+            }
+            input {
+                width: 200px;
+                padding: 8px;
+                font-size: 12px;
+                outline: none;
+        border: none;
+        border-radius: 0.5vh;
+            }
+            form  #password {
+        margin-top: 4vh;
+       }
+            label {
+                font-size: 14px;
+                margin-right: 1vh;
+            }
+            .wrapper #email {
+                margin-left: 28px;
+            }
+            .wrapper button {
+                width: 50%;
+                font-size: 16px;
+                padding: 5px;
+                border-radius: 5px;
+                background-color: blue;
+        border: none;
+        margin: 6vh 16vh 0;
+        font-weight: 700;
+        font-family: sans-serif;
+            }
+            form #sign-up {
+        float: left;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+       #fpassword {
+        float: right;
+        margin-top: 8vh;
+        text-decoration: none;
+        color: black;
+       }
+        }
+        
+          
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <h1>Sign in</h1>
+            <form name="sign in">
+
+            <label for="email">Email </label>:<input type="email" placeholder="Enter email" id="email">
+            <label for="password" id="Password">Password :</label><input type="password" placeholder="Enter password" id="password">
+            <button class="btn1">Sign in</button>
+            <a href="#" id="sign-up">Sign Up</a>
+            <a href="#" id="fpassword">Forgot password</a></form>
+        </div>
+    </div>
+
+   
+    </script>
+</body>
+</html>

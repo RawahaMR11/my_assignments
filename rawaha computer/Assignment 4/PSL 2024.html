@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PSL POINT TABLE</title>
+      <style>
+            * {
+      margin: 0;
+      padding: 0;
+}
+body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+}
+.my-display {
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+}
+header {
+      height: 11vh;
+      background-color: rgb(62, 188, 176);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+}
+
+
+/* css for opening my page on tablets (screens with width <=768px) */
+
+#logo {
+      width: 10%;
+      height: 90%;
+}
+#logo img {
+      width: 60%;
+      height: 100%;
+}
+.search {
+      height: 7vh;
+      width: 50vh;
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+}
+#all {
+      height: 100%;
+      width: 9vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: rgb(94, 94, 94);
+      outline: none;
+      border: none;
+}
+#search-box {
+      height: 43%;
+      width: 30vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: rgb(195, 195, 195);
+      outline: none;
+      border: none;
+      padding: 2vh;
+}
+#search-icon {
+      height: 69%;
+      width: 5vh;
+      padding: 1.1vh;
+      background-color: rgb(195, 195, 195);
+      border-left: 1.5px solid rgb(94, 94, 94);
+      cursor: pointer;
+}
+/* css for opening my page on phones (screens with width <=480px) */
+.main ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+  }
+  
+  .main li {
+      margin-right: 20px;
+  }
+  .main li img {
+      width: 50px;
+      height: 90%;
+  }
+  
+  .main a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      color: black;
+  }
+  
+  .menu-icon {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+  }
+  
+  /* Media query for screens smaller than 550px */
+  @media (max-width: 550px) {
+      .main {
+          display: none; /* Hide the navigation links */
+      }
+  
+      .menu-icon {
+          display: block; /* Show the menu icon */
+      }
+  
+      .menu-icon.active + .main {
+          display: block; /* Display the menu when the icon is clicked */
+      }
+  
+      .main ul {
+          flex-direction: column; /* Stack the menu items vertically */
+          width: 100%;
+      }
+  
+      .main li {
+          margin: 10px 0;
+          text-align: center;
+      }
+  }
+  @media screen and (max-width: 768px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+/* css for opening my page on laptops,pcs etc (screens with width <=1080px) */
+@media screen and (max-width: 1080px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+.navigation {
+      height: 87vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+table {
+      width: 700px;
+}
+th {
+      padding: 10px;
+}
+img {
+      width: 50px;
+}
+td {
+      text-align: center;
+}
+      </style>
+</head>
+<body>
+      <div class="my-display">
+            <header>
+                  <div id="logo">
+                        <img src="logo.png">
+                  </div>
+                  <div class="search">
+                        <select name="All" id="all">
+                              <option>All</option>
+                        </select>
+                        <input type="text" placeholder="Search me" id="search-box">
+                        <img src="search.png" id="search-icon">
+                  </div>
+
+                  <nav class="main">
+                        <ul>
+                        <li><a href="./Art Gallery.html">Home</a></li>
+                        <li><a href="#">Art Gallery</a></li>
+                        <li><a href="#">Artists</a></li>
+                        <li><a href="#">Description</a></li>
+                        <li><img src="./login.jpeg" alt="Login"></li>
+                        </ul>
+                  </nav>
+                  <div class="menu-icon" id="menu-icon">&#9776;</div>
+            </div>
+      </header>
+
+
+
+
+
+      <div class="navigation">
+            <div class="nav">
+                  <table border="">
+                        <tr id="tr1">
+                              <th>Team</th>
+                              <th>Matches</th>
+                              <th>Win</th>
+                              <th>Loss</th>
+                              <th>Draw</th>
+                              <th>NRR</th>
+                              <th>Pts</th>
+                        </tr>
+                        <tr>
+                              <th><img src="./multan.png" alt="MULTAN SULTAN"></th>
+                              <td>10</td>
+                              <td>7</td>
+                              <td>3</td>
+                              <td>0</td>
+                              <td>+1.150</td>
+                              <td>14</td>
+                        </tr>
+                        <tr>
+                              <th><img src="./peshawa.png" alt="PESHAWAR ZALMI"></th>
+                              <td>10</td>
+                              <td>6</td>
+                              <td>3</td>
+                              <td>1</td>
+                              <td>+0.147</td>
+                              <td>13</td>
+                        </tr>
+                        <tr>
+                              <th><img src="./islamabad.jpeg" alt="ISLAMABAD UNITED"></th>
+                              <td>10</td>
+                              <td>5</td>
+                              <td>4</td>
+                              <td>1</td>
+                              <td>+0.224</td>
+                              <td>11</td>
+                        </tr>
+                        <tr>
+                              <th><img src="./quetta.jpeg" alt="QUETTA GLADIATTERS"></th>
+                              <td>10</td>
+                              <td>5</td>
+                              <td>4</td>
+                              <td>1</td>
+                              <td>-0.921</td>
+                              <td>11</td>
+                        </tr>
+                        <tr>
+                              <th><img src="./karachi.jpeg" alt="KARACHI KINGS"></th>
+                              <td>10</td>
+                              <td>4</td>
+                              <td>6</td>
+                              <td>0</td>
+                              <td>-0.192</td>
+                              <td>8</td>
+                        </tr>
+                        <tr>
+                              <th><img src="./lahore.png" alt="LAHORE QALANDER"></th>
+                              <td>10</td>
+                              <td>1</td>
+                              <td>8</td>
+                              <td>0</td>
+                              <td>-0.554</td>
+                              <td>3</td>
+                        </tr>
+                  </table>
+            </div>
+      </div>
+</body>
+</html>

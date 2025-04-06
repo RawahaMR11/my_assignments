@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(255, 174, 112);
+            font-family: "Roboto", serif;
+        }
+        .container {
+            display: block;
+        }
+        .intro {
+            width: 80%;
+            text-align: center;
+            margin: 20px 130px 0;
+            color: rgb(222, 56, 56);
+        }
+        .intro h1::first-letter {
+            font-size: 60px;
+            color: green;
+        }
+        .intro p::first-line {
+            font-size: 22px;
+            color: green;
+        }
+        .linkers {
+            width: 50%;
+            margin: 30px 340px 0;
+            padding: 15px;
+            background-color: rgb(222, 56, 56);
+            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px rgb(56, 50, 50);
+        }
+        .linkers a {
+            width: fit-content;
+            display: block;
+            width: auto;
+            text-decoration: none;
+            color: rgb(255, 174, 112);
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 800ms;
+        }
+        .linkers a:hover {
+            background-color: rgb(255, 174, 112);
+            color: rgb(222, 56, 56);
+            box-shadow: 5px 5px 5px wheat;
+        }
+        .linkers a:active {
+            background-color: green;
+            color: wheat;
+        }
+        .linkers a:visited {
+            background-color: aqua;
+        }
+        .form {
+            display: inline-block;
+            width: 30%;
+            padding: 10px;
+            margin: 50px 440px 50px;
+            border-radius: 10px;
+            background-color: rgb(222, 56, 56);
+            color: rgb(255, 174, 112);
+            box-shadow: 5px 5px 10px rgb(56, 50, 50);
+        }
+        #name {
+            width: 270px;
+            padding: 5px;
+            background-color: rgb(222, 56, 56);
+            border: none;
+            outline: none;
+            border-bottom: 2px solid rgb(255, 174, 112);
+            font-size: 16px;
+            margin-left: 5px;
+        }
+        #name:focus {
+            background-color: green;
+            color: rgb(255, 174, 112);
+        }
+        #email-label {
+            margin-left: 32px;
+        }
+        #email {
+            width: 270px;
+            padding: 5px;
+            margin-top: 20px;
+            margin-left: 5px;
+            background-color: rgb(222, 56, 56);
+            border: none;
+            outline: none;
+            border-bottom: 2px solid rgb(255, 174, 112);
+            font-size: 16px;
+        }
+        #email:focus {
+            background-color: green;
+            color: rgb(255, 174, 112);
+        }
+        #password {
+            width: 270px;
+            padding: 5px;
+            margin-top: 20px;
+            margin-left: 5px;
+            background-color: rgb(222, 56, 56);
+            border: none;
+            outline: none;
+            border-bottom: 2px solid rgb(255, 174, 112);
+            font-size: 16px;
+        }
+        #password:focus {
+            background-color: green;
+            color: rgb(255, 174, 112);
+        }
+        #btn {
+            width: 100px;
+            padding: 5px;
+            margin-top: 50px;
+            margin-left: 130px;
+            background-color: rgb(255, 174, 112);
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: rgb(222, 56, 56);
+            font-size: 20px;
+            font-weight: 700;
+            transition: 800ms;
+        }
+        #btn:hover {
+            padding: 8px;
+            background-color: green;
+            color: rgb(255, 174, 112);
+            box-shadow: 5px 5px 5px wheat;
+        }
+        #btn:link {
+            background-color: black;
+            color: white;
+        }
+
+        /* Sir mujey before aur after ka usage saheeh tareeqey par nahi kar paya. */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1>My Description</h1>
+            <p>I am Muhammad Rawaha. I am the student of web devolopment and mobile application devolopment at SMIT academy, also I am the student of Doctor of Physical therapy at IPM&R KMU.</p>
+        </div>
+
+        <div class="linkers">
+            <a href="#" id="google">Google</a>
+            <a href="#" id="insta">Instagram</a>
+            <a href="#" id="face">Facebook</a>
+            <a href="#" id="twitter">Twitter</a>
+        </div>
+
+        <div class="form">
+            <form action="">
+                <label for="username" id="name-label">Full Name :
+                    <input type="text" name="username" placeholder="Enter Your Name" id="name">
+                </label>
+                <label for="email" id="email-label">Email :
+                    <input type="email" placeholder="*****@gmail.com" id="email">
+                </label>
+                <label for="password" id="password-label">Password :
+                    <input type="password" id="password">
+                </label>
+
+                <input type="submit" id="btn">
+            </form>
+
+
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media query for screens smaller than 550px */
+@media (max-width: 550px) {
+    .nav {
+        display: none; /* Hide the navigation links */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .menu-icon.active + .nav {
+        display: block; /* Display the menu when the icon is clicked */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Stack the menu items vertically */
+        width: 100%;
+    }
+
+    .nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">My Logo</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+    </header>
+
+    <script src="script.js">
+      // Toggle the menu on smaller screens when the menu icon is clicked
+const menuIcon = document.getElementById('menu-icon');
+const nav = document.querySelector('.nav');
+
+menuIcon.addEventListener('click', function() {
+    nav.classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>

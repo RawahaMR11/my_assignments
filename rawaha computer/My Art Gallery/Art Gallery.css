@@ -1,0 +1,422 @@
+* {
+      margin: 0;
+      padding: 0;
+}
+body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+}
+.my-display {
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+}
+header {
+      height: 11vh;
+      background-color: rgb(62, 188, 176);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+}
+
+
+/* css for opening my page on tablets (screens with width <=768px) */
+
+#logo {
+      width: 10%;
+      height: 90%;
+}
+#logo img {
+      width: 60%;
+      height: 100%;
+}
+.search {
+      height: 7vh;
+      width: 50vh;
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+}
+#all {
+      height: 100%;
+      width: 9vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: rgb(94, 94, 94);
+      outline: none;
+      border: none;
+}
+#search-box {
+      height: 43%;
+      width: 30vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: rgb(195, 195, 195);
+      outline: none;
+      border: none;
+      padding: 2vh;
+}
+#search-icon {
+      height: 69%;
+      width: 5vh;
+      padding: 1.1vh;
+      background-color: rgb(195, 195, 195);
+      border-left: 1.5px solid rgb(94, 94, 94);
+      cursor: pointer;
+}
+/* css for opening my page on phones (screens with width <=480px) */
+.main ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+  }
+  
+  .main li {
+      margin-right: 20px;
+  }
+  .main li img {
+      width: 50px;
+      height: 90%;
+  }
+  
+  .main a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      color: black;
+  }
+  
+  .menu-icon {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+  }
+  
+  /* Media query for screens smaller than 550px */
+  @media (max-width: 550px) {
+      .main {
+          display: none; /* Hide the navigation links */
+      }
+  
+      .menu-icon {
+          display: block; /* Show the menu icon */
+      }
+  
+      .menu-icon.active + .main {
+          display: block; /* Display the menu when the icon is clicked */
+      }
+  
+      .main ul {
+          flex-direction: column; /* Stack the menu items vertically */
+          width: 100%;
+      }
+  
+      .main li {
+          margin: 10px 0;
+          text-align: center;
+      }
+  }
+  @media screen and (max-width: 768px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+/* css for opening my page on laptops,pcs etc (screens with width <=1080px) */
+@media screen and (max-width: 1080px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+
+
+
+.nav {
+      height: 89vh;
+      background-image: url(bac.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.nav1 {
+      height: 100%;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5vh;
+}
+#box1 {
+      height: 25vh;
+      width: 20vh;
+      background-color: rgb(234, 140, 63);
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box1 img {
+      width: 100%;
+      height: 50%;
+}
+#box1:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box1 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+#box2 {
+      height: 25vh;
+      width: 20vh;
+      background-color: rgb(234, 140, 63);
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box2:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box2 img {
+      width: 100%;
+      height: 50%;
+}
+#box2 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 1.5vh;
+}
+#box3 {
+      height: 25vh;
+      width: 20vh;
+      background-color: goldenrod;
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box3:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box3 img {
+      width: 100%;
+      height: 50%;
+}
+#box3 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+#box4 {
+      height: 25vh;
+      width: 20vh;
+      background-color: rgb(234, 140, 63);
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box4:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box4 img {
+      width: 100%;
+      height: 50%;
+}
+#box4 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+#box5 {
+      height: 25vh;
+      width: 20vh;
+      background-color: rgb(234, 140, 63);
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box5:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box5 img {
+      width: 100%;
+      height: 50%;
+}
+#box5 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+#box6 {
+      height: 25vh;
+      width: 20vh;
+      background-color: rgb(234, 140, 63);
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      box-shadow: 1rem dimgray;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box6:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box6 img {
+      width: 100%;
+      height: 50%;
+}
+#box6 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+#box7 {
+      height: 25vh;
+      width: 20vh;
+      background-color: goldenrod;
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box7:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box7 img {
+      width: 100%;
+      height: 50%;
+}
+#box7 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+#box8 {
+      height: 25vh;
+      width: 20vh;
+      background-color: goldenrod;
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box8:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box8 img {
+      width: 100%;
+      height: 50%;
+}
+#box8 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+#box9 {
+      height: 25vh;
+      width: 20vh;
+      background-color: rgb(234, 140, 63);
+      padding: 0.5vh;
+      color: black;
+      margin-top: 3vh;
+      opacity: 65%;
+      cursor: pointer;
+      transition: 800ms ease;
+}
+#box9:hover {
+      margin-top: 1vh;
+      transition: 800ms ease;
+}
+#box9 img {
+      width: 100%;
+      height: 50%;
+}
+#box9 p {
+      text-align: center;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 2.3vh;
+}
+footer {
+      height: 9vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      background-color: black;
+  }

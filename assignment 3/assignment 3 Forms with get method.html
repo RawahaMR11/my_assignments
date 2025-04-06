@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Assignment 3 Forms</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+            }
+            body {
+                  color: black;
+                  font-weight: 700;
+                  font-family: cursive;
+                  font-size: 14px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+            .main {
+                  background-color: gray;
+                  padding: 5px;
+                  border-radius: 10px;
+            }
+      </style>
+</head>
+<body>
+      <div class="main">
+            <form action="#" method="get">
+                  <h1>My General Form</h1>
+                  <label for="username">Full Name : <input type="text" name="username"></label> 
+                  <br><br>
+                  <label for="password">Password : <input type="password" name="password"></label>
+                  <br><br>
+                  <label for="email">Email : <input type="email" name="email"></label>
+                  <br><br>
+                  <label for="male"><input type="radio" name="gender" value="male">Male</label>
+                  
+                  <label for="female"><input type="radio" name="gender" value="female">Female</label>
+      
+                  <label for="rather"><input type="radio" name="gender" value="rather">Rather</label>
+                  <br><br>
+                  <label for="Nursing"><input type="checkbox" name="Nursing" value="Nursing">Nursing</label>
+      
+                  <label for="DPT"><input type="checkbox" value="DPT" name="DPT">DPT</label>
+      
+                  <label for="Cardiology"><input type="checkbox" value="Cardiology" name="Cardiology">Cardiology</label>
+                  <br><br>
+                  <label for="fruits">
+                        <select name="fruits" id="fruits">
+                              <option value="mango" name="fruits">Mango</option>
+                              <option value="Grapes">Grapes</option>
+                              <option value="Banana">Banana</option>
+                              <option value="Pomegranate">Pomegranate</option>
+                              <option value="orange">orange</option>
+                        </select></label>
+                  <br><br>
+                  <label for="comment">Comment us :
+                        <br> <textarea name="comment" id="comment"></textarea>
+                  </label>
+                  <br><br>
+                  <label for="URL">URL : <input type="url" name="URL"></label>
+                  <br><br>
+                  <label for="color">Choose your Favorite color : <input type="color" name="color" value="color"></label>
+                  <br><br>
+                  <label for="Date">Date : <input type="datetime-local"></label>
+                  <br><br>
+                  <label for="range">Temp% : <input type="range" name="range" value="15 &#8451;"></label>
+                  <br><br>
+                  <label for="image">Upload Image : <input type="file" name="image" value="file"></label>
+                  <br><br>
+                  <label for="search">Seach here : <input type="search" name="search"></label>
+                  <br><br>
+                  <input type="submit" value="Submit">
+      </div>
+      </form>
+
+</body>
+</html>

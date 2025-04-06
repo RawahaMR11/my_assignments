@@ -1,0 +1,276 @@
+* {
+      margin: 0;
+      padding: 0;
+}
+body {
+      background-color: black;
+      color: white;
+      background-image: url(html5.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+.my-display {
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+}
+header {
+      height: 11vh;
+      background-color: rgb(62, 188, 176);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+  /* css for opening my page on laptops,pcs etc (screens with width <=1080px) */
+@media screen and (max-width: 1080px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+  /* css for opening my page on phones (screens with width <=480px) */
+  #logo {
+      width: 10%;
+      height: 90%;
+}
+#logo img {
+      width: 60%;
+      height: 100%;
+}
+.search {
+      height: 7vh;
+      width: 50vh;
+      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+}
+#all {
+      height: 100%;
+      width: 9vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: rgb(94, 94, 94);
+      outline: none;
+      border: none;
+}
+#search-box {
+      height: 43%;
+      width: 30vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: rgb(195, 195, 195);
+      outline: none;
+      border: none;
+      padding: 2vh;
+}
+#search-icon {
+      height: 69%;
+      width: 5vh;
+      padding: 1.1vh;
+      background-color: rgb(195, 195, 195);
+      border-left: 1.5px solid rgb(94, 94, 94);
+      cursor: pointer;
+}
+/* css for opening my page on phones (screens with width <=480px) */
+.main ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+  }
+  
+  .main li {
+      margin-right: 20px;
+  }
+  .main li img {
+      width: 50px;
+      height: 90%;
+  }
+  
+  .main a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      color: black;
+  }
+  
+  .menu-icon {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+  }
+  
+  /* Media query for screens smaller than 550px */
+  @media (max-width: 550px) {
+      .main {
+          display: none; /* Hide the navigation links */
+      }
+  
+      .menu-icon {
+          display: block; /* Show the menu icon */
+      }
+  
+      .menu-icon.active + .main {
+          display: block; /* Display the menu when the icon is clicked */
+      }
+  
+      .main ul {
+          flex-direction: column; /* Stack the menu items vertically */
+          width: 100%;
+      }
+  
+      .main li {
+          margin: 10px 0;
+          text-align: center;
+      }
+  }
+  @media screen and (max-width: 768px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+/* css for opening my page on laptops,pcs etc (screens with width <=1080px) */
+@media screen and (max-width: 1080px) {
+      body {
+            font-size: 1rem;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+
+.nav {
+      display: flex;
+      justify-content: center; 
+}
+.wrap {
+      width: 60%;
+      background-color: rgb(49, 56, 58);
+      padding: 2rem;
+      border: none;
+      border-radius: 2vh;
+      margin: 2rem 15rem -15rem;
+      opacity: 90%;
+}
+#book-name {
+      text-align: center;
+      color: rgb(218, 218, 218);
+      color: rgb(65, 169, 9);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+}
+#author-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1vh;
+      color: rgb(218, 218, 218);
+      display: flex;
+      font-size: 1.1rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+}
+#author-info h2 {
+      margin-right: 2vh;
+      font-size: 1.1rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      color: rgb(128, 178, 101);
+}
+#author-info p {
+      margin-left: 2vh;
+      font-size: 1.1rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+}
+#history {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700; 
+}
+#history h2 {
+      color: rgb(128, 178, 101);
+}
+#history p {
+      margin-top: -1rem;
+      font-size: 0.8rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+}
+#summary {
+      margin-top: 1rem;
+}
+#summary h2 {
+      font-size: 1.6rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      color: rgb(128, 178, 101);
+}
+#summary p {
+      margin-top: 2vh;
+      font-size: 0.8rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+}
+#rate {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      color: rgb(128, 178, 101);
+}
+#rate p {
+      color: yellow;
+}
+.btn1 {
+      margin: 1vh 2vh 0;
+}
+#btn1 {
+      width: 30vh;
+      float: right;
+      padding: 1vh;
+      background-color: rgb(128, 178, 101);
+      border: none;
+      border-radius: 1vh;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 700;
+      opacity: 90%;
+}
+footer {
+      height: 9vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      background-color: black;
+      margin-top: 20rem;
+  }

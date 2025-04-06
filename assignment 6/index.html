@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Web page</title>
+    <style>
+        @font-face {
+            font-family: Roborocondensed;
+            src: url(./fonts/RobotoCondensed-VariableFont_wght.ttf);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roborocondensed;
+        }
+        body {
+            background-color: rgb(69, 21, 74);
+            font-size: 16px;
+        }
+        header {
+            height: 60px;
+            background-color: rgb(69, 21, 74);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:100px;
+        }
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main a {
+            text-decoration: none;
+            color:  hsl(0, 0%, 100%);
+            margin: 20px;
+            padding: 10px;
+        }
+        .main a:hover {
+            background-color: rgb(149, 13, 159);
+            font-weight: 700;
+        }
+        .main a:active {
+            color: brown;
+            background-color: rgb(36, 82, 36);
+            border-radius: 3px;
+            font-weight: 700;
+        }
+        /* Link not working also visited not working so please sir again discuss it in detail */
+        .search-bar {
+            height: 30px;
+            width: 500px;
+        } 
+        form {
+            display: flex;
+            align-items: center;
+        }
+        form img {
+            width: 30px;
+            padding: 3px;
+            background-color: rgb(172, 172, 172, 0.8);
+        }
+        form input {
+            width: 94.5%;
+            height: 30px;
+            outline: none;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            color: green;
+        }
+        .navigation {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            background-color: rgb(91, 13, 98, 0.8);
+            font-family: Robotocondensed;
+            font-size: 90px;
+            color: rgb(255, 255, 255);
+        }
+        .navigation:hover {
+            background-color: rgb(149, 13, 159);
+        }
+        #welcome-para {
+            transition: 800ms;
+        }
+        #welcome-para:hover {
+            color: rgb(31, 169, 15);
+            font-weight: 700;
+            transform: scale(1.1);
+        }
+        #welcome-para::first-letter {
+            font-size: 140px; 
+        }
+        span::first-letter {
+            font-size: 190px;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: -40px;
+        }
+        .box {
+            height: 180px;
+            width: 150px;
+            background-color: rgb(91, 13, 98, 0.8);
+        }
+        .box:hover {
+            background-color: rgb(149, 13, 159);
+        }
+        .box:active {
+            background-color: rgb(31, 169, 15);
+        }
+        .box img {
+            width: 100%;
+            padding: 5px;
+            transition: 800ms ease;
+        }
+        .box img:hover {
+            transform: scale(1.25);
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        a:visited {
+            background-color: blue;
+        }
+        figcaption {
+            margin-top: 15px;
+            padding: 5px;
+        }
+        #recipes {
+            margin-top: 5px;
+        }
+        .comment-container {
+            width: 500px;
+            margin:100px 400px 0px;
+            background-color: rgb(91, 13, 98);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        label {
+            color: white;
+        }
+        input {
+            width: 300px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid white;
+            color: white;
+            font-size: 16px;
+            font-weight: 100;
+            background-color: rgb(91, 13, 98);
+            padding: 5px;
+        }
+        #email {
+            margin-top: 15px;
+        }
+        #password {
+            margin: 15px 0 15px ;
+        }
+        #password:focus {
+            background-color: rgb(149, 13, 159);
+        }
+        #username-label {
+            margin-left: 40px;
+        }
+        
+        #email-label {
+            margin-left: 68px;
+        }
+        #password-label {
+            margin-left: 40.5px;
+        }
+        #comment-label {
+            margin-left: 40px;
+        }
+        #comment {
+            width: 300px;
+            height: 150px;
+            margin-left: 113px;
+            font-size: 16px;
+            outline: none;
+            background-color: rgb(91, 13, 98);
+            color: white;
+        }
+        footer {
+            height: 40px;
+            color: white;
+            font-size: 16px;
+            background-color: rgb(10, 5, 10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main">
+                <a href="#">Home</a>
+                <a href="#">Models</a>
+                <a href="#">Description</a>
+                <a href="#">About us</a>
+                <a href="#">Contact us</a>
+        </div>
+
+            <div class="search-bar" id="search-bar">
+                <form action="">
+                    <img src="./icons/search.png" alt="Search icon">
+                    <input type="search" placeholder="Search me">
+                </form>
+            </div>
+    </header>
+
+    <div class="navigation">
+        <p id="welcome-para">WELCOME TO SHAH DESIGNS</p>
+    </div>
+
+    <div class="nav">
+        <a href="#">
+            <div class="box" id="box1">            
+                <figure>
+                    <img src="./pictures/art.jpeg" alt="Art Gallery">
+                    <figcaption>Art Gallery</figcaption>
+                </figure>
+            </div>
+        </a>
+
+
+
+        <div class="box" id="box2">
+            <a href="#">
+                <figure>
+                    <img src="./pictures/recipe.jpeg" alt="Art Gallery">
+                    <figcaption id="recipes">Delicious Recipes</figcaption>
+                </figure>
+            </a>
+        </div>
+
+
+
+        <div class="box" id="box3">
+            <a href="#">
+                <figure>
+                    <img src="./pictures/product.jpeg" alt="Art Gallery">
+                    <figcaption>Products Catalog</figcaption>
+                </figure>
+            </a>
+        </div>
+
+
+
+
+        <div class="box" id="box4">
+            <a href="#">
+                <figure>
+                    <img src="./pictures/resume.jpeg" alt="Art Gallery">
+                    <figcaption>My Portfolio</figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="comment-container">
+            <label for="username" id="username-label">Full Name :
+                <input type="text" name="username" placeholder="Enter Full Name" id="username">
+            </label>
+            <label for="email" id="email-label">Email :
+                <input type="email" name="email" placeholder="Enter Email" id="email">
+            </label>
+            <label for="password" id="password-label">Password :
+                <input type="password" name="password" id="password">
+            </label>
+            <label for="comment" id="comment-label">Comment :
+                <textarea name="comment" id="comment"></textarea>
+            </label>
+    </div>
+
+
+
+    <footer>
+        <p>&COPY; Copyright, Shah Designs 2025 inc.</p>
+    </footer>
+</body>
+</html>

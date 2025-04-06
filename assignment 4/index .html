@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shah Designs</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+            body {
+                  display: block;
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  background-color: rgb(87, 14, 155);
+            }
+            .container {
+                  display: block;
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  font-size: 14px;
+            }
+            header {
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  background: rgba(41, 16, 112, 0.8);
+                  color: white;
+                  gap: 30px;
+            }
+            .logo {
+                  margin: 0 30px 0;
+            }
+            .search {
+                  margin: 0 150px 0 40px;
+                  height: 30px;
+                  width: 300px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+            #All {
+                  height: 100%;
+                  width: 40px;
+                  border: none;
+                  outline: none;
+                  color: white;
+                  background-color: lightslategray;
+            }
+            .search input {
+                  height: 100%;
+                  width: 250px;
+                  padding: 5px;
+                  border: none;
+                  outline: none;
+                  background-color: lightgray;
+            }
+            #search-icon {
+                  padding: 5px;
+                  background-color: lightslategray;
+            }
+            #login {
+                  margin-top: 5px;
+            }
+            .links {
+                  display: flex;
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  font-size: 20px;
+                  gap: 20px;
+            }
+            .links>a {
+                  color: white;
+                  text-decoration: none;
+                  padding: 5px;
+            }
+            .links>a:hover {
+                  background-color: lightslategray;
+                  border-radius: 5px;
+            }
+            .login {
+                  margin: 0 1px 0 150px;
+            }
+            .login img {
+                  border-radius: 33%;
+                  cursor: pointer;
+            }
+            .navigation {
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+            .nav {
+                  width: 70%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 100px 0 0;
+                  gap: 20px;
+                  flex-wrap: wrap;
+            }
+            .box {
+                  height: 120px;
+                  width: 100px;
+                  background-color: lightslategray;
+                  padding: 5px;
+                  cursor: pointer;
+            }
+            figcaption {
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  font-weight: 700;
+                  font-size: 16px;
+                  text-align: center;
+                  margin-top: 12.5px;
+            }
+            .box img{
+                  transition: transform 0.3s ease;
+            }
+            .box img:hover {
+                  transition: transform 0.3s ease;
+                  transform: scale(1.1);
+            }
+            #box3 figcaption {
+                  margin-top: 19px;
+            }
+            #box9 figcaption {
+                  margin-top: 19px;
+            }
+            
+            footer {
+                  height: 40px;
+                  background-color: lightslategray;
+                  font-size: 16px;
+                  color: white;
+                  padding: 10px;
+                  margin: 133px 0 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+      </style>
+</head>
+<body>
+      <div class="container">
+            <header>
+                  <div id="logo" class="logo"><img src="./logo.png" alt="my page logo" width="55px" height="40px"></div>
+
+                  <div id="search" class="search">
+                        <select name="all" id="All">
+                              <option>All</option>
+                        </select>
+                        <input type="search" placeholder="Search me" class="Search-box">
+                        <img src="./search.png" alt="search-icon" width="30px" height="100%" id="search-icon">
+                  </div>
+
+                  <div id="links" class="links">
+                        <a href="#">Home</a>
+                        <a href="#">Models</a>
+                        <a href="#">Description</a>
+                        <a href="#">About</a>
+                  </div>
+                  <div id="login" class="login"><img src="./login.jpeg" alt="Login logo" width="40px" height="40px"></div>
+            </header>
+
+
+            <div class="navigation">
+                  <div class="nav">
+                        <div id="box1" class="box">
+                              <figure>
+                                    <img src="./psl.jpg" alt="PSL image" width="100%">
+                                    <figcaption>PSL 2024 Point Table</figcaption>
+                              </figure>                              
+                        </div>
+
+                        <div id="box2" class="box">
+                              <figure>
+                                    <img src="./art.jpeg" alt="Art Gallery image" width="100%">
+                                    <figcaption>My Art Gallery</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box3" class="box">
+                              <figure>
+                                    <img src="./recipe.jpeg" alt="Recipe book image" width="100%">
+                                    <figcaption>Recipe Book</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box4" class="box">
+                              <figure>
+                                    <img src="./product.jpeg" alt="Product Catalog image" width="100%">
+                                    <figcaption>Product Catalog</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box5" class="box">
+                              <figure>
+                                    <img src="./travel.jpeg" alt="Booking a Trip image" width="100%">
+                                    <figcaption>Travel Booking</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box6" class="box">
+                              <figure>
+                                    <img src="./university.png" alt="University Course image" width="100%">
+                                    <figcaption>University Course</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box7" class="box">
+                              <figure>
+                                    <img src="./weather.jpeg" alt="Weather Forecaste image" width="100%">
+                                    <figcaption>Weather Forecaste</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box8" class="box">
+                              <figure>
+                                    <img src="./job.jpeg" alt="Job Application image" width="100%">
+                                    <figcaption>Job Application</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box9" class="box">
+                              <figure>
+                                    <img src="./review.jpeg" alt="Book Review image" width="100%">
+                                    <figcaption>Book Review</figcaption>
+                              </figure>
+                        </div>
+
+                        <div id="box10" class="box">
+                              <figure>
+                                    <img src="./resume.jpeg" alt="Pesonnel Resume image" width="100%">
+                                    <figcaption>Personnel Resume</figcaption>
+                              </figure>
+                        </div>
+                  </div>
+            </div>
+
+
+
+
+
+
+
+            <footer>
+                  <p>&COPY; copyright, Shah Designs 2024-2025, Inc.</p>
+            </footer>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+            const btn1 = document.getElementById("box1");
+            btn1.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn2 = document.getElementById("box2");
+            btn2.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./art gallery.html";  // Replace with your target HTML file
+            });
+
+            const btn3 = document.getElementById("box3");
+            btn3.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn4 = document.getElementById("box4");
+            btn4.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn5 = document.getElementById("box5");
+            btn5.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn6 = document.getElementById("box6");
+            btn6.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn7 = document.getElementById("box7");
+            btn7.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn8 = document.getElementById("box8");
+            btn8.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn9 = document.getElementById("box9");
+            btn9.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn10 = document.getElementById("box10");
+            btn10.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+      </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shah Designs</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+            }
+            body {
+                  display: block;
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  background-color: rgb(87, 14, 155);
+            }
+            .container {
+                  display: block;
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  font-size: 14px;
+            }
+            header {
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  background: rgba(41, 16, 112, 0.8);
+                  color: white;
+                  gap: 30px;
+            }
+            .logo {
+                  margin: 0 30px 0;
+            }
+            .search {
+                  margin: 0 150px 0 40px;
+                  height: 30px;
+                  width: 300px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+            #All {
+                  height: 100%;
+                  width: 40px;
+                  border: none;
+                  outline: none;
+                  color: white;
+                  background-color: lightslategray;
+            }
+            .search input {
+                  height: 100%;
+                  width: 250px;
+                  padding: 5px;
+                  border: none;
+                  outline: none;
+                  background-color: lightgray;
+            }
+            #search-icon {
+                  padding: 5px;
+                  background-color: lightslategray;
+            }
+            .links {
+                  display: flex;
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  font-size: 20px;
+                  gap: 20px;
+            }
+            .links>a {
+                  color: white;
+                  text-decoration: none;
+                  padding: 5px;
+            }
+            .links>a:hover {
+                  background-color: lightslategray;
+                  border-radius: 5px;
+            }
+            .login {
+                  margin: 0 1px 0 150px;
+            }
+            .login img {
+                  border-radius: 33%;
+                  cursor: pointer;
+            }
+            .navigation {
+                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+            .nav {
+                  width: 80%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 100px 0 0;
+                  gap: 40px;
+                  flex-wrap: wrap;
+            }
+            .box {
+                  cursor: pointer;
+            }
+            .box img {
+                  margin-top: 15px;
+                  border-radius: 10px;
+                  transition: 800ms;
+                  box-shadow: 1rem 0.5rem 2rem lightslategray;
+            }
+            .box img:hover {
+                  transition: 800ms;
+                  margin-top: 5px;
+            }
+      </style>
+</head>
+<body>
+      <div class="container">
+            <header>
+                  <div id="logo" class="logo"><img src="./logo.png" alt="my page logo" width="55px" height="40px"></div>
+
+                  <div id="search" class="search">
+                        <select name="all" id="All">
+                              <option>All</option>
+                        </select>
+                        <input type="search" placeholder="Search me" class="Search-box">
+                        <img src="./search.png" alt="search-icon" width="25px" height="66.7%" id="search-icon">
+                  </div>
+
+                  <div id="links" class="links">
+                        <a href="./index .html">Home</a>
+                        <a href="#">Models</a>
+                        <a href="#">Description</a>
+                        <a href="#">About</a>
+                  </div>
+                  <div id="login" class="login"><img src="./login.jpeg" alt="Login logo" width="40px" height="40px"></div>
+            </header>
+
+
+            <div class="navigation">
+                  <div class="nav">
+                        <div id="box1" class="box">
+                              <img src="./bird1.jpeg" alt="Art of the Bird image" width="300px">
+                        </div>
+
+                        <div id="box2" class="box">
+                              <img src="./kidney1.jpeg" alt="Kidney image" width="300px">
+                        </div>
+                        
+                        <div id="box3" class="box">
+                              <img src="./elephant1.jpeg" alt="Elephant image" width="300px">
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+            const btn1 = document.getElementById("box1");
+            btn1.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./bird.html";  // Replace with your target HTML file
+            });
+
+            const btn2 = document.getElementById("box2");
+            btn2.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./kidney.html";  // Replace with your target HTML file
+            });
+
+            const btn3 = document.getElementById("box3");
+            btn3.addEventListener("click", function() {
+            // This will open a new HTML file
+            window.location.href = "./elephant.html";  // Replace with your target HTML file
+            });            
+      </script>
+</body>
+</html>

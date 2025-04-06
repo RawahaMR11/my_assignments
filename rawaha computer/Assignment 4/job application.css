@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+    color: white;
+    background-image: url(html5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.my-display {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    height: 11vh;
+    background-color: rgb(62, 188, 176);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
+/* css for opening my page on tablets (screens with width <=768px) */
+#logo {
+    width: 10%;
+    height: 90%;
+}
+#logo img {
+    width: 60%;
+    height: 100%;
+}
+.search {
+    height: 7vh;
+    width: 50vh;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#all {
+    height: 100%;
+    width: 9vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(94, 94, 94);
+    outline: none;
+    border: none;
+}
+#search-box {
+    height: 43%;
+    width: 30vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(195, 195, 195);
+    outline: none;
+    border: none;
+    padding: 2vh;
+}
+#search-icon {
+    height: 69%;
+    width: 5vh;
+    padding: 1.1vh;
+    background-color: rgb(195, 195, 195);
+    border-left: 1.5px solid rgb(94, 94, 94);
+    cursor: pointer;
+}
+/* css for opening my page on phones (screens with width <=480px) */
+.main ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main li {
+    margin-right: 20px;
+}
+.main li img {
+    width: 50px;
+    height: 90%;
+}
+
+.main a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media query for screens smaller than 550px */
+@media (max-width: 550px) {
+    .main {
+        display: none; /* Hide the navigation links */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+    }
+
+    .menu-icon.active + .main {
+        display: block; /* Display the menu when the icon is clicked */
+    }
+
+    .main ul {
+        flex-direction: column; /* Stack the menu items vertically */
+        width: 100%;
+    }
+
+    .main li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+          font-size: 1rem;
+    }
+    .my-display {
+          width: 100%;
+    }
+}
+/* css for opening my page on laptops,pcs etc (screens with width <=1080px) */
+@media screen and (max-width: 1080px) {
+    body {
+          font-size: 1rem;
+    }
+    .my-display {
+          width: 100%;
+    }
+}
+.navigation {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.nav {
+    height: 243vh;
+    margin: 1rem 21rem 1rem;
+    background-color: rgb(73, 73, 72);
+    padding: 1rem;
+    border-radius: 1rem;
+    opacity: 90%;
+}
+.nav h1 {
+    margin-top: 1rem;
+    text-align: center;
+}
+form {
+    margin-top: 2rem;
+    margin-left: 10rem;
+}
+input {
+    padding: 1vh;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(141, 3, 3);
+    background-color:rgb(73, 73, 72);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+#name {
+  
+    align-items: center;
+    justify-content: center;
+}
+#fname {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#email {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#password {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#cnic {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#domicile {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#domicile-image {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#gpa {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#bsc-faculty {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#bsc {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;  }
+#ssc-obtained {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#ssc-obtained  input{
+    width: 38vh;
+}
+#ssc-total {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;  }
+#SSC-total {
+    width: 40vh;
+    padding: 1vh;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(141, 3, 3);
+    background-color:rgb(73, 73, 72);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+#ssc-faculty {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;  }
+#ssc-dmc {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;  }
+#hssc-obtained {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;  }
+#hssc-obtained input {
+    width: 38vh;
+}
+#hssc-total {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;  }
+#HSSC-total {
+    width: 39.5vh;
+    padding: 1vh;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(141, 3, 3);
+    background-color:rgb(73, 73, 72);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+#hssc-faculty {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+#hssc-dmc {
+  
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;  }
+.cancel {
+    float: left;
+    margin-top: 3rem;
+    margin-left: -10rem;
+}
+#cancel {
+    padding: 1vh;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+.submit {
+    float: right;
+    margin-top: 3rem;
+}
+#submit {
+    padding: 1vh;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+footer {
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}

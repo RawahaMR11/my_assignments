@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shah Designs</title>
+      <link rel="stylesheet" href="Shah home page.css">
+      <style>
+            /* Style for the full-size image */
+            .image-container {
+                position: relative;
+                width: 300px;
+                height: 300px;
+            }
+              
+            .full-image {
+                display: none;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                transition: 800ms ease;
+            }
+
+            /* Style for the circle image */
+            .circle-image {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                transition: 800ms ease;
+            }
+            .circle-image:hover {
+                  transform: scale(1.3);
+            }
+            /* Checkbox to toggle the image visibility */
+            input[type="checkbox"] {
+                display: none;
+            }
+    
+            /* When checkbox is checked, show full-size image */
+            input[type="checkbox"]:checked + .image-container .full-image {
+                display: block;
+            }
+    
+            /* When checkbox is checked, hide the circle image */
+            input[type="checkbox"]:checked + .image-container .circle-image {
+                display: none;
+            }
+        </style>
+</head>
+<body>
+      <!-- Checkbox to toggle the full-size image display -->
+      <input type="checkbox" id="toggle-image">
+      
+      <div class="image-container">
+          <!-- Full-size image -->
+          <img src="rawaha mr11.jpg" alt="Full Image" class="full-image" id="fullImage">
+          
+          <!-- Circular image (thumbnail) -->
+          <label for="toggle-image">
+              <img src="rawaha mr11.jpg" alt="Circle Image" class="circle-image" id="circleImage">
+          </label>
+      </div>
+  
+      
+</body>
+</html>

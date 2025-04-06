@@ -1,0 +1,660 @@
+* {
+      margin: 0;
+      padding: 0;
+  }
+  body {
+      color: white;
+      background-color: rgb(6, 53, 51);
+      scroll-behavior: smooth;
+  }
+     /* Style the scrollbar */
+     ::-webkit-scrollbar {
+        width: 12px; /* Set the width of the scrollbar */
+      }
+  
+      /* Style the scrollbar track (background) */
+      ::-webkit-scrollbar-track {
+        background: #000000; /* Light grey track */
+        transition: 1s ease;
+      }
+  
+      /* Style the scrollbar thumb (the draggable part) */
+      ::-webkit-scrollbar-thumb {
+        background: #888; /* Grey thumb */
+        transition: background 1s ease;
+      }
+  
+      /* Change the thumb color when hovered */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Darker grey when hovered */
+      }
+  
+      /* Optional: Style the scrollbar corner */
+      ::-webkit-scrollbar-corner {
+        background: #f1f1f1;
+      }
+
+      header {
+        height: 11vh;
+        background-color: rgb(62, 188, 176);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+  }
+
+  
+
+      #logo {
+        width: 10%;
+        height: 90%;
+  }
+  #logo img {
+        width: 60%;
+        height: 100%;
+  }
+  .search {
+        height: 7vh;
+        width: 50vh;
+        background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+  }
+  #all {
+        height: 100%;
+        width: 9vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        background-color: rgb(94, 94, 94);
+        outline: none;
+        border: none;
+  }
+  #search-box {
+        height: 43%;
+        width: 30vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        background-color: rgb(195, 195, 195);
+        outline: none;
+        border: none;
+        padding: 2vh;
+  }
+  #search-icon {
+        height: 69%;
+        width: 5vh;
+        padding: 1.1vh;
+        background-color: rgb(195, 195, 195);
+        border-left: 1.5px solid rgb(94, 94, 94);
+        cursor: pointer;
+  }
+  /* css for opening my page on phones (screens with width <=480px) */
+  .main ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .main li {
+        margin-right: 20px;
+    }
+    .main li img {
+        width: 50px;
+        height: 90%;
+    }
+    
+    .main a {
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        color: black;
+        padding: 5px;
+    }
+    .main a:hover {
+        background-color: #555;
+    }
+    
+    .menu-icon {
+        display: none;
+        font-size: 26px;
+        cursor: pointer;
+        margin-bottom: 12px;
+        color: #000000;
+    }
+    .navigation {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        
+.circle-container {
+    margin: 3rem 4rem 0;
+    position: relative;
+    width: 100rem;
+    height: 27rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 5rem rgba(17, 251, 255, 0.4);
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.circle-container:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+    box-shadow: 1rem 1rem 5rem rgba(17, 251, 255, 0.4), -1rem -1rem 5rem rgba(17, 251, 255, 0.4);
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.circle-container:hover .circle-image {
+    transform: scale(1.2); /* Zoom in on the image */
+    box-shadow: 1rem 1rem 5rem rgba(17, 251, 255, 0.4), -1rem -1rem 5rem rgba(17, 251, 255, 0.4);
+}
+.info {
+    display: block;
+    margin: 7rem 3rem 0;
+}
+#info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: rgb(0, 0, 189);
+    transform: typing(0px);
+    animation: fadeInOut 2s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+ /* Delay each letter's animation */
+ #info:nth-child(1) {
+    animation-delay: 0s;
+  }
+  #info:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  #info:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  #info:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  #info:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  #info:nth-child(6) {
+    animation-delay: 1s;
+  }
+  #info:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  #info:nth-child(8) {
+    animation-delay: 1.4s;
+  }
+  #info:nth-child(9) {
+    animation-delay: 1.6s;
+  }
+  #info:nth-child(10) {
+    animation-delay: 1.8s;
+  }
+  #info:nth-child(11) {
+    animation-delay: 2s;
+  }
+  #info:nth-child(12) {
+    animation-delay: 2.2s;
+  }
+      /* Keyframes for the typing and removing animation */
+      @keyframes fadeInOut {
+        0% {
+          opacity: 0;
+          transform: typing(20px);
+        }
+        50% {
+          opacity: 1;
+          transform: typing(0);
+        }
+        100% {
+          opacity: 0;
+          transform: typing(0px);
+        }
+      }
+.relation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#insta {
+    height: 3rem;
+    width: 3rem;
+    background-color: rgb(6, 53, 51);
+    margin-top: 3rem;
+    margin-left: 4rem;
+    border-radius: 3rem;
+    border: 0.5vh solid rgb(0, 97, 114);
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 1.2rem rgba(17, 251, 255, 0.4);
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+#insta img {
+    height: 100%;
+    width: 100%;
+}
+#insta:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+    box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+}
+#facebook {
+    height: 3rem;
+    width: 3rem;
+    background-color: rgb(6, 53, 51);
+    margin-top: 3rem;
+    border-radius: 3rem;
+    border: 0.5vh solid rgb(0, 97, 114);
+    box-shadow: 0px 0px 1.2rem rgba(17, 251, 255, 0.4);
+    transition: 0.3s ease;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+#facebook img {
+    height: 100%;
+    width: 100%;
+}
+#facebook:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+    box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+}
+#tiktok {
+    height: 3rem;
+    width: 3rem;
+    background-color: rgb(6, 53, 51);
+    margin-top: 3rem;
+    border-radius: 3rem;
+    border: 0.5vh solid rgb(0, 97, 114);
+    box-shadow: 0px 0px 1.2rem rgba(17, 251, 255, 0.4);
+    transition: 0.3s ease;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+#tiktok img {
+    height: 100%;
+    width: 100%;
+}
+#tiktok:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */    
+    box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+}
+#twitter {
+    height: 3rem;
+    width: 3rem;
+    background-color: rgb(6, 53, 51);
+    margin-top: 3rem;
+    border-radius: 3rem;
+    border: 0.5vh solid rgb(0, 97, 114);
+    box-shadow: 0px 0px 1.2rem rgba(17, 251, 255, 0.4);
+    transition: 0.3s ease;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+#twitter img {
+    height: 100%;
+    width: 100%;
+}
+#twitter:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+    box-shadow: 0rem 0rem 1rem rgba(17, 251, 255, 0.4), 0rem 0rem 1rem rgba(17, 251, 255, 0.4);
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+#left {
+    width: 100rem;
+    margin: 0 3rem 0;
+}
+#image {
+    position: relative;
+    width: 108rem;
+    height: 23.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 5rem rgba(17, 251, 255, 0.4);
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+#image:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+    box-shadow: 1rem 1rem 5rem rgba(17, 251, 255, 0.4), -1rem -1rem 5rem rgba(17, 251, 255, 0.4);
+}
+
+#circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+#image:hover #circle-image {
+    transform: scale(1.2); /* Zoom in on the image */
+    box-shadow: 1rem 1rem 5rem rgba(17, 251, 255, 0.4), -1rem -1rem 5rem rgba(17, 251, 255, 0.4);
+}
+#right {
+    width: 100rem;
+    margin: 0 3rem 0;
+}
+#more {
+    margin: 4rem 5.5rem 0;
+    padding: 2vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    background-color: rgb(9, 255, 0);
+    color: rgb(6, 53, 51);
+    border-radius: 1vh;
+    box-shadow: 2px 2px 10px 2px rgba(17, 251, 255, 0.4), 2px -2px 10px 2px rgba(17, 251, 255, 0.4),-2px 2px 10px 2px rgba(17, 251, 255, 0.4), -2px 2px 10px 2px rgba(17, 251, 255, 0.4);
+    transition: 600ms ease-out;
+    cursor: pointer;
+}
+#more:hover {
+    background-color: rgba(17, 251, 255, 0.4);
+    box-shadow: 2px 2px 25px 2px rgba(17, 251, 255, 0.4), 2px -2px 25px 2px rgba(17, 251, 255, 0.4),-2px 2px 25px 2px rgba(17, 251, 255, 0.4), -2px 2px 25px 2px rgba(17, 251, 255, 0.4);
+    transition: 600ms ease-out;
+    color: whitesmoke;
+}
+.skills {
+    margin: 10rem 0 0;
+    padding: 3rem;
+}
+#hire-me {
+       width: 55%;
+       margin: 0 16rem 0;
+}
+#hire-me h1 {
+    text-align: center;
+}
+#hire-me p {
+    text-align: center;
+}
+#hire-here {
+    width: 30vh;
+    padding: 2vh;
+    margin-top: 2rem;
+    margin-left: 11.3rem;
+    background-color: black;
+    color: white;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+fieldset {
+    padding: 2rem;
+    background-color: rgba(17, 251, 255, 0.4);
+    box-shadow: 2vh 2vh 5vh black;
+    border-radius: 2vh;
+    border: none
+}
+legend {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 5vh;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    margin: 0 3rem 0;
+}
+#legend-image {
+    height: 100%;
+    width: 100%;
+}
+#skills {
+    width: 41.45%;
+    margin: 10rem 18rem 0;
+    border: none;
+    border-radius: 2vh;
+    padding: 3rem;
+    background-color: rgba(17, 251, 255, 0.4);
+    box-shadow: 2vh 2vh 5vh black;
+}
+#skills h1 {
+    text-align: center;
+}
+progress {
+    margin: 0.5rem 2rem 0;
+    width: 70vh;
+    background-color: green;
+    margin-left: 3rem;
+}
+#html {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 20.55rem;
+}
+#css {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 21.55rem;
+}
+#javascript {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 6rem;
+}
+#php {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 3rem;
+}
+#python {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 0.7rem;
+}
+#graphic {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 5.5rem;
+}
+.my-info {
+    margin: 10rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    gap: 3vh;
+}
+#completed {
+    width: 30%;
+    height: 40vh;
+    background-color: rgba(17, 251, 255, 0.2);
+    padding: 1rem;
+    border-radius: 2vh;
+    transition: 800ms ease;
+    margin: 1rem 0 0;
+}
+#completed:hover {
+    margin-top: 1vh;
+    transition: 800ms ease;
+}
+#completed img {
+    width: 30%;
+    height: 40%;
+    margin: 1rem 7.75rem 0;
+    border-radius: 50%;
+}
+#completed h2 {
+    text-align: center;
+    margin: 1rem 0 0;
+}
+#completed p {
+    text-align: center;
+    margin: 1rem 0 0;
+}
+#clients {
+    width: 30%;
+    height: 40vh;
+    background-color: rgba(17, 251, 255, 0.2);
+    padding: 1rem;
+    border-radius: 2vh;
+    margin: 1rem 0 0;
+}
+#clients:hover {
+    margin-top: 1vh;
+    transition: 800ms ease;
+}
+#clients img {
+    width: 30%;
+    height: 40%;
+    margin: 1rem 7.75rem 0;
+    border-radius: 50%;
+}
+#clients h2 {
+    text-align: center;
+    margin: 1rem 0 0;
+}
+#clients p {
+    text-align: center;
+    margin: 1rem 0 0;
+}
+#experience {
+    width: 30%;
+    height: 40vh;
+    background-color: rgba(17, 251, 255, 0.2);
+    padding: 1rem;
+    border-radius: 2vh;
+    margin: 1rem 0 0;
+}
+#experience:hover {
+    margin-top: 1vh;
+    transition: 800ms ease;
+}
+#experience img {
+    width: 30%;
+    height: 40%;
+    margin: 1rem 7.75rem 0;
+    border-radius: 50%;
+}
+#experience h2 {
+    text-align: center;
+    margin: 1rem 0 0;
+}
+#experience p {
+    text-align: center;
+    margin: 1rem 0 0;
+}
+.my-projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin: 10rem 0 0;
+}
+#my-project1-container {
+    width: 36.5%;
+    height: 85vh;
+}
+#my-project1-container h2 {
+    text-align: center;
+}
+#my-project1 {
+    width: 75vh;
+    height: 70vh;
+    background-color: rgb(4, 98, 87,0);
+    margin: 1rem 0 0;
+}
+#my-project1 img {
+    width: 100%;
+    height: 100%;
+}
+#my-project2-container {
+    width: 36.5%;
+    height: 85vh;
+}
+#my-project2-container h2 {
+    text-align: center;
+}
+#my-project2 {
+    width: 75vh;
+    height: 70vh;
+    background-color: rgb(4, 98, 87, 0);
+    margin: 1rem 0 0;
+    overflow: auto;
+}
+#my-project2 img {
+    width: 100%;
+    height: 100%;
+}
+#my-project2 #my-image {
+    margin-top: 80px;
+}
+footer {
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

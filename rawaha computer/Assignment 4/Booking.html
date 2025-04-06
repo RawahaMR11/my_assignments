@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Booking</title>
+    <link rel="stylesheet" href="Booking.css">
+</head>
+<body>
+<div class="my-display">
+    <header>
+        <div id="logo">
+              <img src="logo.png">
+        </div>
+        <div class="search">
+              <select name="All" id="all">
+                    <option>All</option>
+              </select>
+              <input type="text" placeholder="Search me" id="search-box">
+              <img src="search.png" id="search-icon">
+        </div>
+
+        <nav class="main">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Art Gallery</a></li>
+                  <li><a href="#">Artists</a></li>
+                  <li><a href="#">Description</a></li>
+                  <li><img src="sign in.png" alt="Login"></li>
+              </ul>
+          </nav>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+  </div>
+</header>
+
+
+    <div class="nav">            
+        <div id="back">
+            <button id="btn1">Back</button>
+        </div>
+        
+            <div class="nav1">
+            <h1>Booking a Trip</h1>
+            <form>
+                <div class="name">
+                    <p>Full Name</p> :
+                    <input type="text" id="name" placeholder="Enter Full Name" required>
+                    <span class="hide1"></span>
+                </div>
+                <div class="fname">
+                    <p>Father Name</p> :
+                    <input type="text" id="fname"  placeholder="Enter Father Name" required>
+                    <span class="hide2"></span>
+                </div>
+                <div class="cnic">
+                    <p>CNIC</p> :
+                    <input type="text" id="cnic"  placeholder="Enter Your CINC" required>
+                    <span class="hide3"></span>
+                </div>
+                <div class="type">
+                    <p>Booking Type</p> :
+                    <select name="Booking Type" id="type">
+                        <option>School Trip</option>
+                        <option>College Trip</option>
+                        <option>University Trip</option>
+                    </select>
+                </div>
+                <div class="destination">
+                    <p>Destination</p>:
+                    <input type="text" placeholder="Choose Destination" required id="destination">
+                    <span class="hide4">
+                        <option>Peshawar</option>
+                    </span>
+                </div>
+                <div class="resources">
+                    <p>Traveling Resources</p> :
+                    <select name="resources" id="resources">
+                        <option>Youtang Master With AC</option>
+                        <option>Youtang Master Without AC</option>
+                        <option>Daewoo With AC</option>
+                        <option>Daewoo Without AC</option>
+                        <option>Car With AC</option>
+                        <option>Car Without AC</option>
+                        <option>Jeep With AC</option>
+                        <option>Jeep Without AC</option>
+                    </select>
+                </div>
+                <div class="price">
+                    <p>Price in PKR</p> :
+                    <select name="prices" id="price">
+                        <option>YM with AC = 60000RS per day</option>
+                        <option>YM Without AC = 56000RS per day</option>
+                        <option>Daewoo with AC = 56000RS per day</option>
+                        <option>Daewoo without AC = 51500RS per day</option>
+                        <option>Car with AC = 50000RS per day</option>
+                        <option>Car without AC = 40000RS per day</option>
+                        <option>Jeep with AC = 55000RS per day</option>
+                        <option>Jeep without AC = 50000RS per day</option>
+                    </select>
+                </div>
+                <div class="phone">
+                    <p>Phone No.</p> :
+                    <select name="Codes" id="code" required>
+                        <option>code</option>
+                        <option>0301</option>
+                        <option>0302</option>
+                        <option>0303</option>
+                        <option>0304</option>
+                        <option>0305</option>
+                    </select>
+                    <input type="text"  id="phone" required>
+                </div>
+                <div class="trip-date">
+                    <p>Trip Date</p> :
+                    <input type="date" id="trip-date">
+                </div>
+                <div class="booking-date">
+                    <p>Booking Date</p> :
+                    <input type="date" id="booking-date">
+                </div>
+
+
+
+                <div class="button">
+                
+                    <button id="cancel">Cancel</button>
+                
+                
+                
+                    <button id="info">Booking Informations</button>
+                
+                    <button id="book">Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&COPY; copyright, 2024 Shah Designs</p>
+    </footer>
+</div>   
+        <script>
+            const btn1 = document.getElementById("btn1");
+            btn1.addEventListener("click", function() {
+                //opening a new page by giving full address of page below
+               window.location.href ="Art Gallery.html";
+            })
+        </script>
+</body>
+</html>

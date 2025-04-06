@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body {
+            background-image: url(./b4.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            font-weight: 600;
+        }
+        .main-container {
+            width: 100%;
+            height: 100vh;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav {
+            padding: 2em;
+            border-radius: 1em;
+            /* background-color: rgba(134, 12, 134, 0.5); */
+            background-image: linear-gradient(rgb(150, 11, 122, 0.2), rgb(131, 5, 131, 0.2));
+            border: 1.5px solid white;
+        }
+        .nav>h1 {
+            text-align: center;
+        }
+        .form-container {
+            margin-top: 3em;
+        }
+        input {
+            color: white;
+            padding: 0.2em;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid white;
+            background-image: linear-gradient(rgb(150, 11, 122, 0), rgb(131, 5, 131, 0));
+            background-color: rgba(134, 12, 134, 0);
+        }
+        #box1 {
+            width: 100%;
+        }
+        #password-section {
+            margin-top: 2.5em;
+        }
+        .parent {
+            display: flex;
+            margin-top: 2em;
+        }
+        #checkbox-section {
+            width: 55%;
+        }
+        .parent>#checkbox-section>label>#box2 {
+            border: 1px solid rgb(158, 18, 18);
+        }
+        #checkbox-section>label {
+            display: flex;
+            gap: 3px;
+        }
+        #checkbox-section>label>p {
+            font-size: 14px;
+        }
+        #forgot-section {
+            width: 50%;
+            font-size: 14px;
+        }
+        #forgot-section>a {
+            color: white;
+            text-decoration: none;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+        }
+        #btn {
+            width: 80%;
+            font-size: 22px;
+            font-weight: 700;
+            background-color: white;
+            padding: 0.3em;
+            border: none;
+            border-radius: 1em;
+            cursor: pointer;
+        }
+        #register-section {
+            margin-top: 2em;
+        }
+        #register-section>p>a {
+            color: white;
+            text-decoration: none;
+            font-stretch: ultra-condensed;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="nav">
+            <h1>Login</h1>
+            <div class="form-container">
+                <form action="#">
+                    <div id="email-section">
+                        <label for="email">Email <br> <input type="email" name="email" id="box1"></label>
+                    </div>
+                    <div id="password-section">
+                        <label for="password">Password <br> <input type="password" name="password" id="box1"></label>
+                    </div>
+                    <div class="parent">
+                        <div id="checkbox-section">
+                            <label for="checkbox"><input type="checkbox" name="checkbox" id="box2"><p>Remember me</p></label>
+                        </div>
+                        <div id="forgot-section">
+                            <a href="#">Forgot password</a>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button id="btn">Login</button>
+                    </div>
+                    <div id="register-section">
+                        <p>Don't have an account <a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

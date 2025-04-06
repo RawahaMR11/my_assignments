@@ -1,0 +1,577 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 TRANSITIONAL//EN">
+
+<html lang="en,us">
+
+<head>
+
+   <title>Identity Management and Security - Oracle Application Server Documentation</title>
+
+   <link rel="stylesheet" type="text/css" href="iasdoc.css">
+
+</head>
+
+<body bgcolor="#ffffff">
+
+
+
+<table cellspacing="0" cellpadding="0" border="0" summary="This is a simple table to format the Branding, Feedback, and Help Buttons" width="100%">
+
+   <tr>
+
+   <td nowrap valign="top">
+
+      <p class="title2"><img src="images/doc_library.gif" alt="Oracle Application Server Documentation Library">
+      <br>10<i>g</i> Release 2 (10.1.2)
+
+   </td>
+
+   <td width="100%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="mix.1012/b14006/toc.htm"><img border=0 src="images/glossary.gif" alt="Master Glossary"></a>
+
+      <br><a href="mix.1012/b14006/toc.htm">Master Glossary</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="mix.1012/b14005/toc.htm"><img border=0 src="images/index.gif" alt="Master Index"></a>
+
+      <br><a href="mix.1012/b14005/toc.htm">Master Index</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="nav/docindex.htm"><img border=0 src="images/allbooks.gif" alt="All Books"></a>
+
+      <br><a href="nav/docindex.htm">All Books</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="mailto:appserverdocs_us@oracle.com"><img border=0 src="images/contact.gif" alt="Contact Us"></a>
+
+      <br><a href="mailto:appserverdocs_us@oracle.com">Contact Us</a>
+
+   </td>
+
+   <td nowrap width="2%">&nbsp;</td>
+
+   <td nowrap valign="top">
+
+      <p class="copyright"><a href="nav/help.htm"><img border=0 src="images/help.gif" alt="Help"></a>
+
+      <br><a href="nav/help.htm">Help</a>
+
+   </td>
+
+   </tr>
+
+</table>
+
+
+
+<a name="tabs"></a>
+
+<a href="#portlets"><img src="images/null.gif" alt="Skip tabs" border=0></a>
+
+<table cellspacing="0" cellpadding="0" border="0" summary="Navigation Tabs" width="100%">
+
+   <tr>
+
+      <td scope="col" class="tabs" width="100%"><a href="index.htm"><img src="images/i_home.gif" alt="[Home]" border=0></a> <a href="web.htm"><img src="images/j2ee_apps_i.gif" alt="[J2EE and Internet Applications]" border=0></a> <a href="portal.htm"><img src="images/i_portals.gif" alt="[Portals]" border=0></a> <a href="wireless.htm"><img src="images/i_wireless.gif" alt="[Wireless]" border=0></a> <a href="caching.htm"><img src="images/i_caching.gif" alt="[Caching]" border=0></a> <a href="bi.htm"><img src="images/i_business.gif" alt="[Business Intelligence]" border=0></a> <a href="integrate.htm"><img src="images/i_ebusiness.gif" alt="[E-Business Integration]" border=0></a><img src="images/a_identity_management.gif" alt="[Selected: Identity Management and Security]" border=0> <a href="manage.htm"><img src="images/i_system_management.gif" alt="[System Management]" border=0></a></td>
+
+   </tr>
+
+</table>
+
+
+
+<a name="portlets"></a>
+<span style="font-size: 1pt;">
+<img src="images/null.gif" alt="Select a topic from the following list:" border=0>
+
+<a href="#intro"><img src="images/null.gif" alt="Introduction" border=0></a>
+
+<a href="#core"><img src="images/null.gif" alt="Core Documentation" border=0></a>
+
+
+
+<a href="#security"><img src="images/null.gif" alt="Oracle Identity Management" border=0></a>
+
+<a href="#oca"><img src="images/null.gif" alt="Oracle Application Server Certificate Authority" border=0></a>
+
+
+
+<a href="#sso"><img src="images/null.gif" alt="Oracle Application Server Single Sign-On" border=0></a>
+
+<a href="#oid"><img src="images/null.gif" alt="Oracle Internet Directory" border=0></a>
+
+<a href="#tools"><img src="images/null.gif" alt="Oracle Identity Management Security Developer Tools" border=0></a>
+
+
+</span>
+
+
+<table border=0 frame="void" rules="none" width="100%" cellpadding=0 cellspacing=0 summary="Main Window">
+
+<tr>
+
+   <!-- main window, left column -->
+
+   <td scope="col" valign="top" width="49%">
+
+      <a name="intro"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Introduction</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary="Introduction"><tr><td scope="col" class="RegionBorder">
+
+         <p class="text">Oracle Application Server includes security and identity management features to provide a combination of flexibility and security across enterprise applications and infrastructures. 
+</p>
+
+      </td></tr></table>
+
+      <p>
+
+      <a name="core"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Core Application Server Documentation</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server Core Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Oracle Application Server Security Guide</td>
+
+            <td valign="top" class="text"><a href="core.1012/b13999/toc.htm" title="Oracle Application Server Security Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="core.1012/b13999.pdf" title="Oracle Application Server Security Guide PDF">PDF</a></td>
+
+         </tr>
+
+         </table>
+
+      </td></tr></table>
+
+<p>
+
+  <a name="security"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Core Identity Management Documentation</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Core Identity Management Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Oracle Identity Management Concepts and Deployment Planning Guide</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14084/toc.htm" title="Identity Management Concepts and Deployment Planning Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14084.pdf" title="Identity Management Concepts and Deployment Planning Guide PDF">PDF</a></td>
+
+         </tr>
+
+ <tr>
+
+            <td scope="row" width="100%" class="text">Oracle Identity Management Integration Guide</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14085/toc.htm" title="Identity Management Integration Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14085.pdf" title="Identity Management Integration Guide PDF">PDF</a></td>
+
+         </tr>
+
+ <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Oracle Identity Management Guide to Delegated Administration</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14086/toc.htm" title="Identity Management Guide to Delegated Administration HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14086.pdf" title="Identity Management Guide to Delegated Administration PDF">PDF</a></td>
+
+         </tr>
+
+ <tr>
+
+            <td scope="row" width="100%" class="text">Oracle Identity Management Application Developer's Guide</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14087/toc.htm" title="Identity Management Application Developer's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14087.pdf" title="Identity Management Application Developer's Guide PDF">PDF</a></td>
+
+         </tr>
+
+ <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Oracle Identity Management User Reference</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b15883/toc.htm" title="Identity Management User Reference HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b15883.pdf" title="Identity Management User Reference PDF">PDF</a></td>
+
+         </tr>
+
+
+         </table>
+
+      </td></tr></table>
+<p>
+
+  <a name="oid"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Internet Directory</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server Core Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+            <td scope="row" width="100%" class="text">Administrator's Guide</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14082/toc.htm" title="Oracle Internet Directory Administrator's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14082.pdf" title="Oracle Internet Directory Administrator's Guide PDF">PDF</a></td>
+
+         </tr>
+
+
+<tr>
+
+            <td scope="row" width="100%" class="text">Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b14083/toc.htm" title="Oracle Internet Directory API Reference HTML">Javadoc</a></td>
+
+
+
+         </tr>
+         </table>
+      </td></tr></table>
+
+
+<p>
+
+
+      <a name="oca"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server Certificate Authority</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server Certificate Authority Documentation" cellspacing=0 cellpadding=2>
+
+  <tr class="tablehilight">
+
+       <td scope="row" width="100%" class="text">Administrator's Guide</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14080/toc.htm" title="Oracle Application Server Certificate Authority Administrator's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14080.pdf" title="Oracle Application Server Certificate Authority Administrator's Guide PDF">PDF</a></td>
+
+         </tr>
+
+
+ <tr>
+
+       <td scope="row" width="100%" class="text">Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b14081/index.html" title="Oracle Application Server Certificate Authority Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+         </table>
+
+      </td></tr></table>
+
+
+</td>
+
+
+
+   <!-- spacer -->
+
+   <td scope="col" width="2%">&nbsp;</td>
+
+
+
+   <!-- main window, right column -->
+
+   <td scope="col" valign="top" width="49%">
+
+
+      <a name="sso"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Application Server Single Sign-On</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Application Server Single Sign-On Documentation" cellspacing=0 cellpadding=2>
+
+         <tr class="tablehilight">
+
+       <td scope="row" width="100%" class="text">Administrator's Guide</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14078/toc.htm" title="Oracle Application Server Single Sign-On Administrator's Guide HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b14078.pdf" title="Oracle Application Server Single Sign-On Administrator's Guide PDF">PDF</a></td>
+
+         </tr>
+
+         </table>
+
+      </td></tr></table>
+
+
+
+<p>
+
+      <a name="tools"></a>
+
+      <table border=0 frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr>
+
+         <td scope="col" width="100%"><span class="OraPortletHeader">Oracle Identity Management Security Developer Tools</span></td>
+
+      </tr></table>
+
+      <table border=1 bordercolor="#336699" frame="void" rules="none" width="100%" cellpadding=3 cellspacing=0 summary=" "><tr><td scope="col" class="RegionBorder">
+
+         <table border=0 frame="void" rules="none" width="100%" summary="Oracle Security Developer Tools Documentation" cellspacing=0 cellpadding=2>
+
+ <tr class="tablehilight">
+
+       <td scope="row" width="100%" class="text">Reference</td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b15975/toc.htm" title="Oracle Security Developer Tools Reference HTML">HTML</a></td>
+
+            <td valign="top" class="text"><a href="idmanage.1012/b15975.pdf" title="Oracle Security Developer Tools Reference PDF">PDF</a></td>
+
+         </tr>
+
+<tr>
+
+
+       <td scope="row" width="100%" class="text">PKI SDK CMP Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15559/index.html" title="PKI SDK CMP Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr class="tablehilight">
+
+
+       <td scope="row" width="100%" class="text">PKI SDK LDAP Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15561/index.html" title="PKI SDK LDAP Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr>
+
+
+       <td scope="row" width="100%" class="text">PKI SDK OCSP Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15562/index.html" title="PKI SDK OCSP Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr class="tablehilight">
+
+       <td scope="row" width="100%" class="text">PKI SDK TSP Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15563/index.html" title="PKI SDK TSP Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr>
+
+
+       <td scope="row" width="100%" class="text">CMS Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15564/index.html" title="CMS Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr class="tablehilight">
+
+       <td scope="row" width="100%" class="text">Crypto Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15565/index.html" title="Crypto Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+
+<tr>
+
+       <td scope="row" width="100%" class="text">Liberty 1.1 Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b19114/index.html" title="Liberty 1.1 Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr class="tablehilight">
+
+       <td scope="row" width="100%" class="text">Liberty 1.2 Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b19113/index.html" title="Liberty 1.2 Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+
+
+<tr>
+
+       <td scope="row" width="100%" class="text">S/MIME Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15567/index.html" title="S/MIME Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr class="tablehilight">
+
+
+       <td scope="row" width="100%" class="text">SAML Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15568/index.html" title="SAML Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr>
+
+       <td scope="row" width="100%" class="text">Security Engine Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15569/index.html" title="Security Engine Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr class="tablehilight">
+
+
+       <td scope="row" width="100%" class="text">Web Services Security Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15570/index.html" title="Web Services Security Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+<tr>
+
+       <td scope="row" width="100%" class="text">XML Security Java API Reference</td>
+
+            <td valign="top" class="text" colspan=2><a href="idmanage.1012/b15571/index.html" title="XML Java API Reference HTML">Javadoc</a></td>
+
+
+         </tr>
+
+
+
+
+
+         </table>
+
+      </td></tr></table>
+
+
+
+
+
+
+
+</td>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" summary="border">
+
+   <tr><td scope="col" class="tabs" width="100%"><img src="images/null.gif" alt="lower border" height=30></td></tr>
+
+</table>
+
+
+
+<p class="copyright"><img src="dcommon/gifs/oracle.gif" alt="Oracle Corporation" border="0">
+
+<br><a href="dcommon/html/cpyr.htm">Copyright &copy; 2002, 2005 Oracle</a>
+
+<br>All Rights Reserved.</p>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

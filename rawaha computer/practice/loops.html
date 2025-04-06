@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>LOOPS</title>
+</head>
+<body>
+     <h1 id="header">List King</h1>
+     <h2>Buy groceries</h2>
+     <ul>
+        <li id="one" class="hot">Pine nuts</li>
+        <li id="two" class="hot">Honey</li>
+        <li id="three" class="hot"><em>Fresh</em> figs</li>
+        <li id="four">Balsamic vinegar</li>
+     </ul>
+
+   <div id="scriptResults"></div>
+<script>
+      // //LOOPS
+      //             var score = [30,35,40];
+      //             var arrayLength = score.length;
+      //             var roundNumber = 0;
+      //             var msg = '';
+      //             var i;
+
+
+      //             for (i=0; i<arrayLength; i++) {
+      //                   roundNumber = (i=1);
+
+      //                   msg += 'Round' + roundNumber + ': ';
+      //                   msg += score[i] + '<br />';
+      //             }
+      //             document.getElementById('footer').innerHTML=msg;
+
+
+
+
+
+
+
+
+      // var el = document.getElementById('one');
+      // el.className = 'cool';
+      // var elements = document.getElementsByClassName('hot');
+      // if (elements.length >= 1) {
+      //       var firstItem = elements.item(0);
+      // }
+
+
+
+
+
+
+
+
+
+// var hotItems = document.querySelectorAll('li.hot');
+//        if (hotItems.length > 0) {
+            
+//       for (var i = 0; i < hotItems.length; i++) {
+//             hotItems[i].className = 'cool';
+//       }
+//        }
+         
+
+
+
+      //    var startItem = document.getElementById('two');
+      //    var preItem = startItem.previousSibling;
+      //    var nextIem = startItem.nextSibling;
+
+      //    preItem.className = 'smart';
+      //    nextIem.className = 'very-cool';
+
+
+
+      // var startItem = document.getElementsByTagName('ul')[0];
+      // var firstItem = startItem.firstChild;
+      // var lastItem = startItem.lastChild;
+
+
+      // firstItem.setAttribute('class', 'complete');
+      // lastItem.setAttribute('class', 'very-cool');
+
+      // var itemTwo = document.getElementById('two');
+
+      // var elText = itemTwo.firstChild.nodeValue;
+
+      // elText = elText.replace('Honey','very very');
+      // itemTwo.firstChild.nodeValue = elText;
+
+      // var itemThree = document.getElementById('three');
+      // var elThree = itemThree.firstChild.textContent;
+
+      // elThree = elThree.replace('<em>Fresh</em> figs', 'honey');
+      // itemThree.firstChild.textContent = elThree;
+
+
+
+
+
+
+
+
+      // var thirdItem = document.getElementById('three');
+      // var showTextContent = thirdItem.textContent;
+      // var showInnerText = thirdItem.innerText;
+
+      // var msg = '<p>textContent: ' + showTextContent + '</p>';
+      // msg += '<p>innerText: ' + showInnerText + '</p>';
+      
+      // var el = document.getElementById('scriptResults');
+      // el.innerHTML = msg;
+
+      // thirdItem.textContent = 'sourdouph bread';
+
+      // var thirdItem = document.getElementById('three');
+      // var itemContent = thirdItem.innerHTML;
+
+      // thirdItem.innerHTML = '<a href = \"http://example.org\">' + itemContent + '</a>';
+
+
+
+
+
+
+      //Creating a new element 
+      // var newElement = document.createElement('li');
+      // var textNewEl = document.createTextNode('Quinoa');
+      
+      // newElement.appendChild(textNewEl);
+      // var position = document.getElementsByTagName('ul')[0];
+      // position.appendChild(textNewEl);
+
+
+
+      //Another practice 
+      // var Hi = document.createElement('li');
+      // var textHi = document.createTextNode('Its all of me');
+      // Hi.appendChild(textHi);
+      // var position = document.getElementsByTagName('ul')[0];
+      // position.appendChild(Hi);
+
+
+
+
+      //another pratice
+
+      // var maima = document.createElement('li');
+      // var textUmaima = document.createTextNode('Its me MR11');
+      // maima.appendChild(textUmaima);
+      // var position = document.getElementsByTagName('ul')[0];
+      // position.appendChild(maima);
+
+
+
+      // var byMaima = document.getElementsByTagName('li')[4];
+      // var containerMaima1 = byMaima.parentNode;
+      // containerMaima1.removeChild(byMaima);
+      
+
+
+
+
+      var firstItem = document.getElementById('one');
+      if (firstItem.hasAttribute('class')) {
+            var attr = firstItem.getAttribute('class')
+            var el1 = document.getElementById('scriptResults');
+            el1.innerHTML = '<p>The first item has a class name: ' + attr + '</p>'
+      }
+</script>
+</body>
+</html>

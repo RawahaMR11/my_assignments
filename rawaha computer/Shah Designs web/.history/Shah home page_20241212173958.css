@@ -1,0 +1,139 @@
+* {
+      margin: 0;
+      padding: 0;
+}
+body {
+      display: block;
+      font-size: 14px;
+      background-color: rgb(6, 53, 51);
+}
+.my-display {
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+}
+/* css for opening my page on tablets (screens with width <=768px) */
+@media screen and (max-width: 768px) {
+      body {
+            font-size: 16px;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+/* css for opening my page on laptops,pcs etc (screens with width <=1080px) */
+@media screen and (max-width: 1080px) {
+      body {
+            font-size: 14px;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+/* css for opening my page on phones (screens with width <=480px) */
+@media screen and (max-width: 480px) {
+      body {
+            font-size: 10px;
+      }
+      .my-display {
+            width: 100%;
+      }
+}
+header {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: rgb(62, 188, 176);
+      opacity: 90%;
+      gap: 40px;
+}
+.logo {
+      height: 83%;
+      width: 70px;
+      margin: 0 30px 0;
+}
+.logo img {
+      height: 100%;
+      width: 100%;
+}
+.search {
+      width: 200px;
+      height: 30px;
+      background-color: rgb(95, 95, 95);
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+}
+.search img {
+      width: 10%;
+      height: 65%;
+      padding: 6px;
+}
+.search input {
+      width: 90%;
+      padding: 5.34px;
+      border: none;
+      outline: none;
+      background-color: rgb(207, 207, 207);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 16px;
+}
+.home {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 22px;
+      margin-left: 35px;
+}
+.home a {
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
+}
+.gallery {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 22px;
+}
+.gallery a {
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
+}
+.members {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 22px;
+}
+.members a {
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
+}
+.about {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 22px;
+}
+.about a {
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
+}
+.membership {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 22px;
+}
+.membership a {
+      text-decoration: none;
+      font-weight: 700;
+      color: white;
+}
+.login {
+      height: 90%;
+      width: 55px;
+      float: right;
+      margin-left: 25px;
+}
+.login img {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+}
